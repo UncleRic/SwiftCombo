@@ -10,6 +10,8 @@ import UIKit
 let kCellIdentifier = "TimeLineCell"
 
 class ClubsViewController: UIViewController {
+    
+    private let hand = Hand()
 
     @IBOutlet weak var gTableView: UITableView!
     
@@ -19,6 +21,9 @@ class ClubsViewController: UIViewController {
         let myNib = UINib(nibName: "CardTableViewCell",bundle: nil)
         gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
 
+        let card = Card(rank: Rank.Ace, suit: Suit.Clubs)
+        let deck = card.createDeck()
+        return
     }
 
     override func didReceiveMemoryWarning() {
