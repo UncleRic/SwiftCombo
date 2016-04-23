@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		18452A551CCAC76600938F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A541CCAC76600938F19 /* AppDelegate.swift */; };
-		18452A571CCAC76600938F19 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A561CCAC76600938F19 /* FirstViewController.swift */; };
+		18452A571CCAC76600938F19 /* ClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A561CCAC76600938F19 /* ClubsViewController.swift */; };
 		18452A591CCAC76600938F19 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A581CCAC76600938F19 /* SecondViewController.swift */; };
 		18452A5C1CCAC76600938F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18452A5A1CCAC76600938F19 /* Main.storyboard */; };
 		18452A5E1CCAC76600938F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18452A5D1CCAC76600938F19 /* Assets.xcassets */; };
 		18452A611CCAC76600938F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18452A5F1CCAC76600938F19 /* LaunchScreen.storyboard */; };
 		18452A6C1CCAC76600938F19 /* SwiftComboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A6B1CCAC76600938F19 /* SwiftComboTests.swift */; };
+		18452A781CCAE45400938F19 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18452A761CCAE45400938F19 /* CardTableViewCell.xib */; };
+		18452A7A1CCAE60700938F19 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A791CCAE60700938F19 /* CardCell.swift */; };
+		18452A7C1CCAF73C00938F19 /* RicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18452A7B1CCAF73C00938F19 /* RicTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +32,7 @@
 /* Begin PBXFileReference section */
 		18452A511CCAC76600938F19 /* SwiftCombo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCombo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18452A541CCAC76600938F19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18452A561CCAC76600938F19 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		18452A561CCAC76600938F19 /* ClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewController.swift; sourceTree = "<group>"; };
 		18452A581CCAC76600938F19 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		18452A5B1CCAC76600938F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18452A5D1CCAC76600938F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		18452A671CCAC76600938F19 /* SwiftComboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftComboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18452A6B1CCAC76600938F19 /* SwiftComboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftComboTests.swift; sourceTree = "<group>"; };
 		18452A6D1CCAC76600938F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18452A771CCAE45400938F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CardTableViewCell.xib; sourceTree = "<group>"; };
+		18452A791CCAE60700938F19 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		18452A7B1CCAF73C00938F19 /* RicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RicTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				18452A541CCAC76600938F19 /* AppDelegate.swift */,
-				18452A561CCAC76600938F19 /* FirstViewController.swift */,
+				18452A561CCAC76600938F19 /* ClubsViewController.swift */,
 				18452A581CCAC76600938F19 /* SecondViewController.swift */,
+				18452A791CCAE60700938F19 /* CardCell.swift */,
 				18452A5A1CCAC76600938F19 /* Main.storyboard */,
+				18452A761CCAE45400938F19 /* CardTableViewCell.xib */,
+				18452A7B1CCAF73C00938F19 /* RicTableViewCell.xib */,
 				18452A5D1CCAC76600938F19 /* Assets.xcassets */,
 				18452A5F1CCAC76600938F19 /* LaunchScreen.storyboard */,
 				18452A621CCAC76600938F19 /* Info.plist */,
@@ -180,7 +189,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18452A7C1CCAF73C00938F19 /* RicTableViewCell.xib in Resources */,
 				18452A611CCAC76600938F19 /* LaunchScreen.storyboard in Resources */,
+				18452A781CCAE45400938F19 /* CardTableViewCell.xib in Resources */,
 				18452A5E1CCAC76600938F19 /* Assets.xcassets in Resources */,
 				18452A5C1CCAC76600938F19 /* Main.storyboard in Resources */,
 			);
@@ -202,7 +213,8 @@
 			files = (
 				18452A591CCAC76600938F19 /* SecondViewController.swift in Sources */,
 				18452A551CCAC76600938F19 /* AppDelegate.swift in Sources */,
-				18452A571CCAC76600938F19 /* FirstViewController.swift in Sources */,
+				18452A571CCAC76600938F19 /* ClubsViewController.swift in Sources */,
+				18452A7A1CCAE60700938F19 /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +251,14 @@
 				18452A601CCAC76600938F19 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		18452A761CCAE45400938F19 /* CardTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18452A771CCAE45400938F19 /* Base */,
+			);
+			name = CardTableViewCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -392,6 +412,7 @@
 				18452A721CCAC76600938F19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18452A731CCAC76600938F19 /* Build configuration list for PBXNativeTarget "SwiftComboTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +421,7 @@
 				18452A751CCAC76600938F19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
