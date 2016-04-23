@@ -16,7 +16,7 @@ class ClubsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Getting UITableViewCell template:
-        let myNib = UINib(nibName: "RicTableViewCell",bundle: nil)
+        let myNib = UINib(nibName: "CardTableViewCell",bundle: nil)
         gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
 
     }
