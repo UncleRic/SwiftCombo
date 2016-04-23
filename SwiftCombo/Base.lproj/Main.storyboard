@@ -34,7 +34,11 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lMB-qC-WPG"/>
-                                    <barButtonItem title="Exit" id="mM4-iO-mrm"/>
+                                    <barButtonItem title="Exit" id="mM4-iO-mrm">
+                                        <connections>
+                                            <action selector="exitAction:" destination="9pv-A4-QxB" id="QCC-IE-Twg"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -97,7 +101,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="first" selectedImage="clover" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="first" selectedImage="smallClover" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="gTableView" destination="ovE-M9-OcL" id="CQM-fc-hxQ"/>
                     </connections>
@@ -140,7 +144,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" selectedImage="heart" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Second" image="smallHeart" selectedImage="first" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,9 +171,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clover" width="39" height="39"/>
-        <image name="first" width="30" height="30"/>
-        <image name="heart" width="32" height="40"/>
-        <image name="second" width="30" height="30"/>
+        <image name="first" width="150" height="209"/>
+        <image name="smallClover" width="22" height="22"/>
+        <image name="smallHeart" width="22" height="22"/>
     </resources>
 </document>

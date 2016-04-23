@@ -27,6 +27,11 @@ class ClubsViewController: UIViewController {
         return
     }
     
+    // -----------------------------------------------------------------------------------------------------
+    
+    @IBAction func exitAction(sender: UIBarButtonItem) {
+        exit(0)
+    }
   
 }
 
