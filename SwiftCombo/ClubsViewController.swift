@@ -7,7 +7,7 @@
 
 import UIKit
 
-let kCellIdentifier = "TimeLineCell"
+let kCellIdentifier = "CardCell"
 
 class ClubsViewController: UIViewController {
     
@@ -21,10 +21,11 @@ class ClubsViewController: UIViewController {
         gTableView.dataSource = dataSource
         // Getting UITableViewCell template:
         let myNib = UINib(nibName: "CardTableViewCell",bundle: nil)
+        
         gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
-
+        
         let deck = createDeck()
-        return
+        
     }
     
     // -----------------------------------------------------------------------------------------------------
@@ -32,6 +33,6 @@ class ClubsViewController: UIViewController {
     @IBAction func exitAction(sender: UIBarButtonItem) {
         exit(0)
     }
-  
+    
 }
 

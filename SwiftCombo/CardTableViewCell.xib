@@ -9,33 +9,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell tag="1" contentMode="scaleToFill" restorationIdentifier="TimeLineCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLineCell" id="2M5-3R-dVh" userLabel="TimeLineCell" customClass="CardCell" customModule="SwiftCombo" customModuleProvider="target">
+        <tableViewCell tag="1" contentMode="scaleToFill" restorationIdentifier="CardCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" id="91h-pa-nkW" userLabel="TimeLineCell" customClass="CardCell" customModule="SwiftCombo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="323" height="66"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="center" tableViewCell="2M5-3R-dVh" id="p59-Eh-pcP">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="center" tableViewCell="91h-pa-nkW" id="9qp-lv-Xya">
                 <rect key="frame" x="0.0" y="0.0" width="323" height="65.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AceOfClubs" translatesAutoresizingMaskIntoConstraints="NO" id="a3c-3X-uzA">
+                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AceOfClubs" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-nX-TKK">
                         <rect key="frame" x="6" y="3" width="42" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="42" id="VA9-EA-lCN"/>
-                            <constraint firstAttribute="width" secondItem="a3c-3X-uzA" secondAttribute="height" multiplier="2:2.5" constant="-6" id="c7K-e1-OF8"/>
+                            <constraint firstAttribute="width" secondItem="lFg-nX-TKK" secondAttribute="height" multiplier="2:2.5" constant="-6" id="7D9-9B-2iq"/>
+                            <constraint firstAttribute="width" constant="42" id="YZr-q9-Jmc"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ace of" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4I-wT-q0U" userLabel="Rank Label">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ace of" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBT-06-ImD" userLabel="Rank Label">
                         <rect key="frame" x="64" y="12" width="228.5" height="18.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="18" id="r80-N5-ZYF"/>
+                            <constraint firstAttribute="height" constant="18" id="6Dh-ug-n0Y"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clubs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dy9-Jc-ciz" userLabel="Suit Label">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clubs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS1-wc-X2n" userLabel="Suit Label">
                         <rect key="frame" x="64" y="35" width="117.5" height="22.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="22" id="U1e-uA-Njc"/>
+                            <constraint firstAttribute="height" constant="22" id="EUi-Wf-hxe"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
                         <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
@@ -43,20 +43,20 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="w4I-wT-q0U" firstAttribute="leading" secondItem="p59-Eh-pcP" secondAttribute="leadingMargin" constant="56" id="FXF-un-juR"/>
-                    <constraint firstItem="w4I-wT-q0U" firstAttribute="top" secondItem="p59-Eh-pcP" secondAttribute="topMargin" constant="4" id="QYK-Xl-xfg"/>
-                    <constraint firstItem="a3c-3X-uzA" firstAttribute="leading" secondItem="p59-Eh-pcP" secondAttribute="leadingMargin" constant="-2" id="RpF-hE-UuJ"/>
-                    <constraint firstItem="dy9-Jc-ciz" firstAttribute="top" secondItem="p59-Eh-pcP" secondAttribute="topMargin" constant="27" id="aoJ-VY-Ru3"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="dy9-Jc-ciz" secondAttribute="trailing" constant="133.5" id="mBU-dV-wSe"/>
-                    <constraint firstItem="dy9-Jc-ciz" firstAttribute="leading" secondItem="p59-Eh-pcP" secondAttribute="leadingMargin" constant="56" id="rHI-wi-hTr"/>
-                    <constraint firstItem="a3c-3X-uzA" firstAttribute="centerY" secondItem="p59-Eh-pcP" secondAttribute="centerY" id="ucp-vq-iWt"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="w4I-wT-q0U" secondAttribute="trailing" constant="22" id="xYd-GR-W0l"/>
+                    <constraint firstItem="lFg-nX-TKK" firstAttribute="centerY" secondItem="9qp-lv-Xya" secondAttribute="centerY" id="1KR-3b-4yo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cS1-wc-X2n" secondAttribute="trailing" constant="133.5" id="M8F-ed-KxW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dBT-06-ImD" secondAttribute="trailing" constant="22" id="Zc2-Uc-VMQ"/>
+                    <constraint firstItem="dBT-06-ImD" firstAttribute="top" secondItem="9qp-lv-Xya" secondAttribute="topMargin" constant="4" id="eUM-p2-NhJ"/>
+                    <constraint firstItem="cS1-wc-X2n" firstAttribute="leading" secondItem="9qp-lv-Xya" secondAttribute="leadingMargin" constant="56" id="k4e-DG-fde"/>
+                    <constraint firstItem="dBT-06-ImD" firstAttribute="leading" secondItem="9qp-lv-Xya" secondAttribute="leadingMargin" constant="56" id="kPi-7x-0OQ"/>
+                    <constraint firstItem="lFg-nX-TKK" firstAttribute="leading" secondItem="9qp-lv-Xya" secondAttribute="leadingMargin" constant="-2" id="nxz-G4-R7B"/>
+                    <constraint firstItem="cS1-wc-X2n" firstAttribute="top" secondItem="9qp-lv-Xya" secondAttribute="topMargin" constant="27" id="pbQ-Pj-hdr"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="cardImageView" destination="a3c-3X-uzA" id="7RO-d6-o2w"/>
-                <outlet property="rankLabel" destination="w4I-wT-q0U" id="jrA-Tx-we3"/>
-                <outlet property="suitLabel" destination="dy9-Jc-ciz" id="GsX-Pd-aas"/>
+                <outlet property="cardImageView" destination="lFg-nX-TKK" id="QXc-vm-0rU"/>
+                <outlet property="rankLabel" destination="dBT-06-ImD" id="yC7-3I-5IW"/>
+                <outlet property="suitLabel" destination="cS1-wc-X2n" id="cg7-s9-Nrt"/>
             </connections>
             <point key="canvasLocation" x="558.5" y="292"/>
         </tableViewCell>
