@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183F51281CCBFAC9008A4F20 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F51271CCBFAC9008A4F20 /* DataSource.swift */; };
 		18452A551CCAC76600938F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A541CCAC76600938F19 /* AppDelegate.swift */; };
 		18452A571CCAC76600938F19 /* ClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A561CCAC76600938F19 /* ClubsViewController.swift */; };
 		18452A591CCAC76600938F19 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A581CCAC76600938F19 /* SecondViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183F51271CCBFAC9008A4F20 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		18452A511CCAC76600938F19 /* SwiftCombo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCombo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18452A541CCAC76600938F19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18452A561CCAC76600938F19 /* ClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				18452A561CCAC76600938F19 /* ClubsViewController.swift */,
 				18452A581CCAC76600938F19 /* SecondViewController.swift */,
 				18452A791CCAE60700938F19 /* CardModel.swift */,
+				183F51271CCBFAC9008A4F20 /* DataSource.swift */,
 				18452A5A1CCAC76600938F19 /* Main.storyboard */,
 				18452A7B1CCAF73C00938F19 /* CardTableViewCell.xib */,
 				18452A5D1CCAC76600938F19 /* Assets.xcassets */,
@@ -210,6 +213,7 @@
 				18452A591CCAC76600938F19 /* SecondViewController.swift in Sources */,
 				18452A551CCAC76600938F19 /* AppDelegate.swift in Sources */,
 				18452A571CCAC76600938F19 /* ClubsViewController.swift in Sources */,
+				183F51281CCBFAC9008A4F20 /* DataSource.swift in Sources */,
 				18452A7A1CCAE60700938F19 /* CardModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

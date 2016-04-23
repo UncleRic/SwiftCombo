@@ -65,24 +65,25 @@ class CardCell:UITableViewCell {
 
 // ===================================================================================================
 
+internal func createDeck() -> [Card] {
+    var n = 1
+    var deck = [Card]()
+    while let rank = Rank(rawValue: n) {
+        var m = 1
+        while let suit = Suit(rawValue: m) {
+            deck.append(Card(rank: rank, suit: suit))
+            m += 1
+        }
+        n += 1
+    }
+    return deck
+}
+
 struct Card {
     var rank: Rank
     var suit: Suit
     func simpleDescription() -> String {
         return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
-    }
-    func createDeck() -> [Card] {
-        var n = 1
-        var deck = [Card]()
-        while let rank = Rank(rawValue: n) {
-            var m = 1
-            while let suit = Suit(rawValue: m) {
-                deck.append(Card(rank: rank, suit: suit))
-                m += 1
-            }
-            n += 1
-        }
-        return deck
     }
 }
 

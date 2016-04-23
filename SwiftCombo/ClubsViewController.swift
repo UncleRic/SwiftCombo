@@ -21,26 +21,10 @@ class ClubsViewController: UIViewController {
         let myNib = UINib(nibName: "CardTableViewCell",bundle: nil)
         gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
 
-        let card = Card(rank: Rank.Ace, suit: Suit.Clubs)
-        let deck = card.createDeck()
+        let deck = createDeck()
         return
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let noteCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath:indexPath) as! CardCell
-        return noteCell
-    }
-
+  
 }
 
