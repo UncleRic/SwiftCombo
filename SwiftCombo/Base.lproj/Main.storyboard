@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -15,14 +16,15 @@
                         <viewControllerLayoutGuide type="bottom" id="YEp-tr-IkZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hZO-NS-pTV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ovE-M9-OcL">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="9Xq-JR-6Hj" id="eR5-Jm-o7c"/>
-                                    <outlet property="delegate" destination="9Xq-JR-6Hj" id="oho-bH-VoO"/>
+                                    <outlet property="dataSource" destination="Cl1-d0-KaJ" id="vo6-Fw-Dzk"/>
+                                    <outlet property="delegate" destination="Cl1-d0-KaJ" id="h4M-go-0Rr"/>
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2p-jn-0VA">
@@ -31,6 +33,11 @@
                                     <constraint firstAttribute="height" constant="44" id="CBL-M2-gc4"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem title="Add Card" id="VEf-wh-n0U">
+                                        <connections>
+                                            <action selector="addCardAction:" destination="9Xq-JR-6Hj" id="bA3-wb-Lt1"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="XN1-hw-kV1"/>
                                     <barButtonItem title="Exit" id="ryo-eI-Xzg">
                                         <connections>
@@ -66,13 +73,13 @@
                                 <exclude reference="f2p-jn-0VA"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="FsU-Tm-X35"/>
+                                <exclude reference="i70-58-5fi"/>
+                                <exclude reference="aaK-Wi-jxc"/>
+                                <exclude reference="lGA-xU-zTT"/>
                                 <exclude reference="b00-3D-R1L"/>
                                 <exclude reference="fM0-hj-B8g"/>
                                 <exclude reference="jbF-E2-LxQ"/>
-                                <exclude reference="aaK-Wi-jxc"/>
-                                <exclude reference="lGA-xU-zTT"/>
-                                <exclude reference="FsU-Tm-X35"/>
-                                <exclude reference="i70-58-5fi"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -81,13 +88,13 @@
                                 <include reference="f2p-jn-0VA"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="FsU-Tm-X35"/>
+                                <include reference="i70-58-5fi"/>
+                                <include reference="aaK-Wi-jxc"/>
+                                <include reference="lGA-xU-zTT"/>
                                 <include reference="b00-3D-R1L"/>
                                 <include reference="fM0-hj-B8g"/>
                                 <include reference="jbF-E2-LxQ"/>
-                                <include reference="aaK-Wi-jxc"/>
-                                <include reference="lGA-xU-zTT"/>
-                                <include reference="FsU-Tm-X35"/>
-                                <include reference="i70-58-5fi"/>
                             </mask>
                         </variation>
                     </view>
@@ -96,6 +103,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okv-Dw-MY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Cl1-d0-KaJ" customClass="CardDataSource" customModule="SwiftCombo" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="525" y="336"/>
         </scene>

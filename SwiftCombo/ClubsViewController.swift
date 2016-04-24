@@ -29,6 +29,12 @@ class ClubsViewController: UIViewController {
     }
     
     // -----------------------------------------------------------------------------------------------------
+    @IBAction func addCardAction(sender: UIBarButtonItem) {
+        if hand.numberOfCards < 5 {
+            
+       // insertTopRowIn(gTableView)
+        }
+    }
     
     @IBAction func exitAction(sender: UIBarButtonItem) {
         exit(0)

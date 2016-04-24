@@ -41,16 +41,16 @@ enum Suit:Int {
             return "clubs"
         }
     }
-    func color() -> String {
+    func color() -> UIColor {
         switch self {
         case .Spades:
-            return "black"
+            return UIColor.blackColor()
         case .Clubs:
-            return "black"
+            return UIColor.blackColor()
         case .Diamonds:
-            return "red"
+            return UIColor.redColor()
         case .Hearts:
-            return "red"
+            return UIColor.redColor()
         }
     }
 }
@@ -61,6 +61,11 @@ class CardCell:UITableViewCell {
     @IBOutlet weak var suitLabel:UILabel!
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var cardImageView:UIImageView!
+    func fillWith(card:Card) {
+        rankLabel.textColor = card.suit.color()
+        rankLabel.text = card.rank.simpleDescription()
+        suitLabel.text = card.suit.simpleDescription()
+    }
 }
 
 // ===================================================================================================
@@ -100,6 +105,26 @@ struct Hand {
     func cardAtPosition(index:Int) -> Card {
         return cards[index]
     }
+    
+    private mutating func insertCard(card:Card, atIndex index:Int) {
+        cards.insert(card, atIndex:index)
+    }
+    
+    func addNewCardAtIndex(index:Int) {
+    //    insertCard(deck.nextCard(), atIndex:index)
+    }
+    
+    mutating func deleteCardAtIndex(index:Int) {
+        cards.removeAtIndex(index)
+    }
+    
+    mutating func moveCard(fromIndex:Int, toIndex:Int) {
+        let cardToMove = cards[fromIndex]
+        deleteCardAtIndex(fromIndex)
+        insertCard(cardToMove, atIndex:toIndex)
+    }
+    
+    
 }
 
 
