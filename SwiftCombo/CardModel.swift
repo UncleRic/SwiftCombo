@@ -9,7 +9,7 @@ import UIKit
 
 enum Rank: Int {
     case Ace = 1
-    case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+    case TwvarThree, Four, Five, Six, Seven, Eight, Nine, Ten
     case Jack, Queen, King
     func simpleDescription() -> String {
         switch self {
@@ -99,8 +99,8 @@ struct Card {
 
 
 struct Hand:DataTypeProtocol {
-   // private let deck = Deck()
     private var cards = [Card]()
+    
     
     subscript(index:Int) -> Card {
         return cards[index]
@@ -114,15 +114,14 @@ struct Hand:DataTypeProtocol {
         return cards[index]
     }
     
-    private mutating func insertItem(card:Card, atIndex index:Int) {
-        cards.insert(card, atIndex:index)
+    private func insertItem(atIndex index:Int) -> Hand {
+        var mutableCards = cards
+        mutableCards.insert(mutableCards[0], atIndex: index)
+        return Hand(cards:mutableCards)
     }
     
     func addNewItemAtIndex(index:Int) -> Hand {
-        
-        return self
-     //   return insertItem(deck.nextCard(), atIndex:index)
-    
+        return insertItem(atIndex:index)
     }
     
     func deleteItemAtIndex(index:Int) -> Hand {

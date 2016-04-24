@@ -13,18 +13,14 @@ let deck = createDeck()
 class ClubsViewController: UIViewController {
     
     private let hand = Hand()
-    private let dataSource = CardDataSource()
     
     @IBOutlet weak var gTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gTableView.dataSource = dataSource
         // Getting UITableViewCell template:
         let myNib = UINib(nibName: "CardTableViewCell",bundle: nil)
-        
         gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
-        
         
     }
     

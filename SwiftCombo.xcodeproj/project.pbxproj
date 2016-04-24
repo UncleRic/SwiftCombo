@@ -44,6 +44,7 @@
 		18452A6D1CCAC76600938F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18452A791CCAE60700938F19 /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		18D4CBB31CCD3F630005AD37 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		18D4CBB51CCD42DB0005AD37 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 		18452A481CCAC76600938F19 = {
 			isa = PBXGroup;
 			children = (
+				18D4CBB51CCD42DB0005AD37 /* MyPlayground.playground */,
 				18452A531CCAC76600938F19 /* SwiftCombo */,
 				18452A6A1CCAC76600938F19 /* SwiftComboTests */,
 				18452A521CCAC76600938F19 /* Products */,

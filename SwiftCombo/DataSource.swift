@@ -19,7 +19,7 @@ class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return hand.numberOfItems
     }
     
     
