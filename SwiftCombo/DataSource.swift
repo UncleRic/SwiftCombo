@@ -8,39 +8,30 @@
 import Foundation
 import UIKit
 
-// Protocols 
-// A protocol is a way of expressing commonalities (behavior) between otherwise unrelated types.
-// A protocol is a type — so dynamic polymorphism applies.
-// They eliminate an entire class of bugs via compile-time vs run-time.
-// SourceTypeProtocol conforms to UITableViewDataSource
-
-protocol SourceTypeProtocol:UITableViewDataSource {
-    func insertTopRowIn(tableView:UITableView)
-    func deleteRowAtIndexPath(indexPath:NSIndexPath, from tableView:UITableView)
-}
-
-extension SourceTypeProtocol {
-    func insertTopRowIn(tableView:UITableView) {
-        tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Fade)
-    }
-    func deleteRowAtIndexPath(indexPath:NSIndexPath, from tableView:UITableView) {
-        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    }
-}
-
-
-// ===================================================================================================
-
 class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
+    private var dataObject:DataTypeProtocol = Hand()
     private var hand = Hand()
+    func addItemTo(tableView:UITableView) {
+        if dataObject.numberOfItems < 5 {
+            dataObject = dataObject.addNewItemAtIndex(0)
+            insertTopRowIn(tableView)
+        }
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let noteCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath:indexPath) as! CardCell
-        return noteCell
+        guard let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath:indexPath) as? CardCell,
+        hand = dataObject as? Hand
+            else {
+            fatalError("Could not create Card cell or Hand Instance.")
+        }
+        
+        cell.fillWith(hand[indexPath.row])
+        return cell
     }
     
     func tableView(tableView: UITableView, commitEditingStyle

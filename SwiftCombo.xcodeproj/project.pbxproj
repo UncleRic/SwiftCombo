@@ -16,6 +16,7 @@
 		18452A611CCAC76600938F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18452A5F1CCAC76600938F19 /* LaunchScreen.storyboard */; };
 		18452A6C1CCAC76600938F19 /* SwiftComboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A6B1CCAC76600938F19 /* SwiftComboTests.swift */; };
 		18452A7A1CCAE60700938F19 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A791CCAE60700938F19 /* CardModel.swift */; };
+		18D4CBB41CCD3F630005AD37 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4CBB31CCD3F630005AD37 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		18452A6B1CCAC76600938F19 /* SwiftComboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftComboTests.swift; sourceTree = "<group>"; };
 		18452A6D1CCAC76600938F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18452A791CCAE60700938F19 /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		18D4CBB31CCD3F630005AD37 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				18452A541CCAC76600938F19 /* AppDelegate.swift */,
+				18D4CBB31CCD3F630005AD37 /* Protocols.swift */,
 				18452A561CCAC76600938F19 /* ClubsViewController.swift */,
 				18452A791CCAE60700938F19 /* CardModel.swift */,
 				183F51271CCBFAC9008A4F20 /* DataSource.swift */,
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D4CBB41CCD3F630005AD37 /* Protocols.swift in Sources */,
 				18452A551CCAC76600938F19 /* AppDelegate.swift in Sources */,
 				18452A571CCAC76600938F19 /* ClubsViewController.swift in Sources */,
 				183F51281CCBFAC9008A4F20 /* DataSource.swift in Sources */,

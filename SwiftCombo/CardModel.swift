@@ -96,9 +96,15 @@ struct Card {
 
 // ===================================================================================================
 
-struct Hand {
+
+
+struct Hand:DataTypeProtocol {
    // private let deck = Deck()
     private var cards = [Card]()
+    
+    subscript(index:Int) -> Card {
+        return cards[index]
+    }
     
     var numberOfItems:Int {
         return cards.count
@@ -112,18 +118,23 @@ struct Hand {
         cards.insert(card, atIndex:index)
     }
     
-    func addNewItemAtIndex(index:Int) {
-    //    insertItem(deck.nextCard(), atIndex:index)
+    func addNewItemAtIndex(index:Int) -> Hand {
+        
+        return self
+     //   return insertItem(deck.nextCard(), atIndex:index)
+    
     }
     
-    mutating func deleteItemAtIndex(index:Int) {
-        cards.removeAtIndex(index)
+    func deleteItemAtIndex(index:Int) -> Hand {
+        return self
+        // cards.removeAtIndex(index)
     }
     
-    mutating func moveCard(fromIndex:Int, toIndex:Int) {
-        let cardToMove = cards[fromIndex]
-        deleteItemAtIndex(fromIndex)
-        insertItem(cardToMove, atIndex:toIndex)
+    func moveItem(fromIndex:Int, toIndex:Int) -> Hand {
+        return self
+//        let cardToMove = cards[fromIndex]
+//        deleteItemAtIndex(fromIndex)
+//        insertItem(cardToMove, atIndex:toIndex)
     }
     
     
