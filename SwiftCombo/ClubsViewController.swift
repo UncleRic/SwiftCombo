@@ -8,6 +8,7 @@
 import UIKit
 
 let kCellIdentifier = "CardCell"
+let deck = createDeck()
 
 class ClubsViewController: UIViewController {
     
@@ -24,13 +25,12 @@ class ClubsViewController: UIViewController {
         
         gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
         
-        let deck = createDeck()
         
     }
     
     // -----------------------------------------------------------------------------------------------------
     @IBAction func addCardAction(sender: UIBarButtonItem) {
-        if hand.numberOfCards < 5 {
+        if hand.numberOfItems < 5 {
             
        // insertTopRowIn(gTableView)
         }

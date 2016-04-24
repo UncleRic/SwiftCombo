@@ -84,6 +84,8 @@ internal func createDeck() -> [Card] {
     return deck
 }
 
+// -----------------------------------------------------------------------------------------------------
+
 struct Card {
     var rank: Rank
     var suit: Suit
@@ -98,30 +100,30 @@ struct Hand {
    // private let deck = Deck()
     private var cards = [Card]()
     
-    var numberOfCards:Int {
+    var numberOfItems:Int {
         return cards.count
     }
     
-    func cardAtPosition(index:Int) -> Card {
+    func itemAtPosition(index:Int) -> Card {
         return cards[index]
     }
     
-    private mutating func insertCard(card:Card, atIndex index:Int) {
+    private mutating func insertItem(card:Card, atIndex index:Int) {
         cards.insert(card, atIndex:index)
     }
     
-    func addNewCardAtIndex(index:Int) {
-    //    insertCard(deck.nextCard(), atIndex:index)
+    func addNewItemAtIndex(index:Int) {
+    //    insertItem(deck.nextCard(), atIndex:index)
     }
     
-    mutating func deleteCardAtIndex(index:Int) {
+    mutating func deleteItemAtIndex(index:Int) {
         cards.removeAtIndex(index)
     }
     
     mutating func moveCard(fromIndex:Int, toIndex:Int) {
         let cardToMove = cards[fromIndex]
-        deleteCardAtIndex(fromIndex)
-        insertCard(cardToMove, atIndex:toIndex)
+        deleteItemAtIndex(fromIndex)
+        insertItem(cardToMove, atIndex:toIndex)
     }
     
     

@@ -31,7 +31,7 @@ extension SourceTypeProtocol {
 
 // ===================================================================================================
 
-class CardDataSource:NSObject, UITableViewDataSource {
+class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
     private var hand = Hand()
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
