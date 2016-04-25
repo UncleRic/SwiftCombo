@@ -20,7 +20,6 @@ class ClubsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        deck = createDeck()
         gTableView.dataSource = datasource
         let myNib = UINib(nibName: "CardTableViewCell",bundle: nil)
         gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
@@ -34,10 +33,10 @@ class ClubsViewController: UIViewController {
     // MARK: - Action methods
     
     @IBAction func NewHand(sender: UIBarButtonItem) {
+        deck = createDeck()
         datasource.hand = hand.createFullHand()
         gTableView.hidden = false
         gTableView.reloadData()
-      return
     }
     
     @IBAction func addCardAction(sender: UIBarButtonItem) {
