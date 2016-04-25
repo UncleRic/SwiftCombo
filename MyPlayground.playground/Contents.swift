@@ -10,7 +10,10 @@ myArray.removeFirst()
 myArray.removeFirst()
 let ricArray = myArray.popLast()
 
+var diceRoll = Int(arc4random_uniform(51))
+
+diceRoll = Int(arc4random_uniform(51))
+diceRoll = Int(arc4random_uniform(51))
 
 
 
-print (myArray)

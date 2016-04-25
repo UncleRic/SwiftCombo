@@ -19,7 +19,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ovE-M9-OcL">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEv-w4-SVK">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="QBn-UI-QpL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="38"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QBn-UI-QpL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="QBn-UI-QpL"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ovE-M9-OcL">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -33,6 +52,11 @@
                                     <constraint firstAttribute="height" constant="44" id="CBL-M2-gc4"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem title="New Hand" id="k1F-PX-fcl">
+                                        <connections>
+                                            <action selector="NewHand:" destination="9Xq-JR-6Hj" id="Nmz-b5-igi"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Add Card" id="VEf-wh-n0U">
                                         <connections>
                                             <action selector="addCardAction:" destination="9Xq-JR-6Hj" id="bA3-wb-Lt1"/>
@@ -56,49 +80,72 @@
                                     </mask>
                                 </variation>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ric's Hand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSs-XU-b1B">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88184368609999997" blue="0.7205524445" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="YEp-tr-IkZ" firstAttribute="top" secondItem="ovE-M9-OcL" secondAttribute="bottom" constant="100" id="FsU-Tm-X35"/>
+                            <constraint firstItem="YEp-tr-IkZ" firstAttribute="top" secondItem="GEv-w4-SVK" secondAttribute="bottom" constant="378" id="UuB-xD-lv0"/>
+                            <constraint firstItem="uSs-XU-b1B" firstAttribute="top" secondItem="war-vd-vv4" secondAttribute="bottom" constant="16" id="aLL-Ft-D3S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f2p-jn-0VA" secondAttribute="trailing" constant="-20" id="aaK-Wi-jxc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ovE-M9-OcL" secondAttribute="leading" id="b00-3D-R1L"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ovE-M9-OcL" secondAttribute="trailing" id="fM0-hj-B8g"/>
                             <constraint firstItem="YEp-tr-IkZ" firstAttribute="top" secondItem="f2p-jn-0VA" secondAttribute="bottom" id="i70-58-5fi"/>
+                            <constraint firstItem="uSs-XU-b1B" firstAttribute="centerX" secondItem="hZO-NS-pTV" secondAttribute="centerX" id="jaH-5G-NS5"/>
                             <constraint firstItem="ovE-M9-OcL" firstAttribute="top" secondItem="war-vd-vv4" secondAttribute="bottom" constant="80" id="jbF-E2-LxQ"/>
                             <constraint firstItem="f2p-jn-0VA" firstAttribute="leading" secondItem="hZO-NS-pTV" secondAttribute="leadingMargin" constant="-20" id="lGA-xU-zTT"/>
+                            <constraint firstItem="GEv-w4-SVK" firstAttribute="centerX" secondItem="hZO-NS-pTV" secondAttribute="centerX" id="m9Z-gS-ztC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="GEv-w4-SVK"/>
                                 <exclude reference="ovE-M9-OcL"/>
                                 <exclude reference="f2p-jn-0VA"/>
+                                <exclude reference="uSs-XU-b1B"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="FsU-Tm-X35"/>
-                                <exclude reference="i70-58-5fi"/>
-                                <exclude reference="aaK-Wi-jxc"/>
-                                <exclude reference="lGA-xU-zTT"/>
                                 <exclude reference="b00-3D-R1L"/>
                                 <exclude reference="fM0-hj-B8g"/>
                                 <exclude reference="jbF-E2-LxQ"/>
+                                <exclude reference="aLL-Ft-D3S"/>
+                                <exclude reference="jaH-5G-NS5"/>
+                                <exclude reference="m9Z-gS-ztC"/>
+                                <exclude reference="aaK-Wi-jxc"/>
+                                <exclude reference="lGA-xU-zTT"/>
+                                <exclude reference="FsU-Tm-X35"/>
+                                <exclude reference="UuB-xD-lv0"/>
+                                <exclude reference="i70-58-5fi"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="GEv-w4-SVK"/>
                                 <include reference="ovE-M9-OcL"/>
                                 <include reference="f2p-jn-0VA"/>
+                                <include reference="uSs-XU-b1B"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="FsU-Tm-X35"/>
-                                <include reference="i70-58-5fi"/>
-                                <include reference="aaK-Wi-jxc"/>
-                                <include reference="lGA-xU-zTT"/>
                                 <include reference="b00-3D-R1L"/>
                                 <include reference="fM0-hj-B8g"/>
                                 <include reference="jbF-E2-LxQ"/>
+                                <include reference="aLL-Ft-D3S"/>
+                                <include reference="jaH-5G-NS5"/>
+                                <include reference="m9Z-gS-ztC"/>
+                                <include reference="aaK-Wi-jxc"/>
+                                <include reference="lGA-xU-zTT"/>
+                                <include reference="FsU-Tm-X35"/>
+                                <include reference="UuB-xD-lv0"/>
+                                <include reference="i70-58-5fi"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="emptyLabel" destination="GEv-w4-SVK" id="Wcj-oX-vC7"/>
                         <outlet property="gTableView" destination="ovE-M9-OcL" id="cFz-1i-WYe"/>
                     </connections>
                 </viewController>
