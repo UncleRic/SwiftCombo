@@ -34,8 +34,7 @@ class ClubsViewController: UIViewController {
     // MARK: - Action methods
     
     @IBAction func NewHand(sender: UIBarButtonItem) {
-        let shit = hand.createFullHand()
-        datasource.hand = shit
+        datasource.hand = hand.createFullHand()
         gTableView.hidden = false
         gTableView.reloadData()
       return
