@@ -41,10 +41,6 @@
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ovE-M9-OcL">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="Cl1-d0-KaJ" id="vo6-Fw-Dzk"/>
-                                    <outlet property="delegate" destination="Cl1-d0-KaJ" id="h4M-go-0Rr"/>
-                                </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2p-jn-0VA">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -109,17 +105,17 @@
                                 <exclude reference="uSs-XU-b1B"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="b00-3D-R1L"/>
-                                <exclude reference="fM0-hj-B8g"/>
-                                <exclude reference="jbF-E2-LxQ"/>
-                                <exclude reference="aLL-Ft-D3S"/>
-                                <exclude reference="jaH-5G-NS5"/>
-                                <exclude reference="m9Z-gS-ztC"/>
-                                <exclude reference="aaK-Wi-jxc"/>
-                                <exclude reference="lGA-xU-zTT"/>
                                 <exclude reference="FsU-Tm-X35"/>
                                 <exclude reference="UuB-xD-lv0"/>
                                 <exclude reference="i70-58-5fi"/>
+                                <exclude reference="m9Z-gS-ztC"/>
+                                <exclude reference="aLL-Ft-D3S"/>
+                                <exclude reference="jaH-5G-NS5"/>
+                                <exclude reference="aaK-Wi-jxc"/>
+                                <exclude reference="lGA-xU-zTT"/>
+                                <exclude reference="b00-3D-R1L"/>
+                                <exclude reference="fM0-hj-B8g"/>
+                                <exclude reference="jbF-E2-LxQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -130,17 +126,17 @@
                                 <include reference="uSs-XU-b1B"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="b00-3D-R1L"/>
-                                <include reference="fM0-hj-B8g"/>
-                                <include reference="jbF-E2-LxQ"/>
-                                <include reference="aLL-Ft-D3S"/>
-                                <include reference="jaH-5G-NS5"/>
-                                <include reference="m9Z-gS-ztC"/>
-                                <include reference="aaK-Wi-jxc"/>
-                                <include reference="lGA-xU-zTT"/>
                                 <include reference="FsU-Tm-X35"/>
                                 <include reference="UuB-xD-lv0"/>
                                 <include reference="i70-58-5fi"/>
+                                <include reference="m9Z-gS-ztC"/>
+                                <include reference="aLL-Ft-D3S"/>
+                                <include reference="jaH-5G-NS5"/>
+                                <include reference="aaK-Wi-jxc"/>
+                                <include reference="lGA-xU-zTT"/>
+                                <include reference="b00-3D-R1L"/>
+                                <include reference="fM0-hj-B8g"/>
+                                <include reference="jbF-E2-LxQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -150,7 +146,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okv-Dw-MY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Cl1-d0-KaJ" customClass="CardDataSource" customModule="SwiftCombo" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="525" y="336"/>
         </scene>

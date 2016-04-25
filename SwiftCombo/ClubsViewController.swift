@@ -21,7 +21,7 @@ class ClubsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         deck = createDeck()
-        // Getting UITableViewCell template:
+        gTableView.dataSource = datasource
         let myNib = UINib(nibName: "CardTableViewCell",bundle: nil)
         gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
     }
@@ -36,7 +36,6 @@ class ClubsViewController: UIViewController {
     @IBAction func NewHand(sender: UIBarButtonItem) {
         let shit = hand.createFullHand()
         datasource.hand = shit
-        gTableView.dataSource = datasource
         gTableView.hidden = false
         gTableView.reloadData()
       return
