@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18078D131CCEBC7700D15110 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 18078D121CCEBC7700D15110 /* README.md */; };
 		183F51281CCBFAC9008A4F20 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F51271CCBFAC9008A4F20 /* DataSource.swift */; };
 		183F512A1CCC22E6008A4F20 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183F51291CCC22E6008A4F20 /* CardTableViewCell.xib */; };
 		18452A551CCAC76600938F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452A541CCAC76600938F19 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18078D121CCEBC7700D15110 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		183F51271CCBFAC9008A4F20 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		183F51291CCC22E6008A4F20 /* CardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
 		18452A511CCAC76600938F19 /* SwiftCombo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCombo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 		18452A481CCAC76600938F19 = {
 			isa = PBXGroup;
 			children = (
+				18078D121CCEBC7700D15110 /* README.md */,
 				18D4CBB51CCD42DB0005AD37 /* MyPlayground.playground */,
 				18452A531CCAC76600938F19 /* SwiftCombo */,
 				18452A6A1CCAC76600938F19 /* SwiftComboTests */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18078D131CCEBC7700D15110 /* README.md in Sources */,
 				18D4CBB41CCD3F630005AD37 /* Protocols.swift in Sources */,
 				18452A551CCAC76600938F19 /* AppDelegate.swift in Sources */,
 				18452A571CCAC76600938F19 /* ClubsViewController.swift in Sources */,
