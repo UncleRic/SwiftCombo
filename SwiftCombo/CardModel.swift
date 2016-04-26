@@ -172,55 +172,6 @@ enum CardItem: Int {
     }
 }
 
-enum Rank: Int {
-    case Ace = 1
-    case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
-    case Jack, Queen, King
-    func simpleDescription() -> String {
-        switch self {
-        case .Ace:
-            return "ace"
-        case .Jack:
-            return "jack"
-        case .Queen:
-            return "queen"
-        case .King:
-            return "king"
-        default:
-            return String(self.rawValue)
-        }
-    }
-}
-
-enum Suit:Int {
-    case Spades = 1, Hearts, Diamonds, Clubs
-    func simpleDescription() -> String {
-        switch self {
-        case .Spades:
-            return "spades"
-        case .Hearts:
-            return "hearts"
-        case .Diamonds:
-            return "diamonds"
-        case .Clubs:
-            return "clubs"
-        }
-    }
-    func color() -> UIColor {
-        switch self {
-        case .Spades:
-            return UIColor.blackColor()
-        case .Clubs:
-            return UIColor.blackColor()
-        case .Diamonds:
-            return UIColor.redColor()
-        case .Hearts:
-            return UIColor.redColor()
-        }
-    }
-}
-
-
 // ===================================================================================================
 
 class CardCell:UITableViewCell {
