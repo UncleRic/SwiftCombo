@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-typealias CardTupple = (rank:String, suit:String, image:UIImage)
+typealias CardTupple = (rank:String, suit:String, color:UIColor, image:UIImage)
 
 let kSpades = "Spades", kHearts = "Hearts", kClubs = "Clubs", kDiamonds = "Diamonds"
 let kAce = "Act", kTwo = "Two", kThree = "Three", kFour = "Four", kFive = "Five"
@@ -15,24 +15,24 @@ let kSix = "Six", kSeven = "Seven", kEight = "Eight", kNine = "Nine", kTen = "Te
 let kJack = "Jack", kQueen = "Queen", kKing = "King"
 
 let kAceSpades = "AceSpades"
-let kTwoSpades = "TwoSpades", kThreeSpades = "ThreeSpades", kFourSpades = "FourSpades", kFiveSpades = "FiveSpades"
-let kSixSpades = "SixSpades", kSevenSpades = "SevenSpades", kEightSpades = "EightSpades", kNineSpades = "NineSpades"
-let kTenSpades = "TenSpades", kJackSpades = "JackSpades", kQueenSpades = "QueenSpades", kKingSpades = "KingSpades"
+let kTwoSpades = "2Spades", kThreeSpades = "3Spades", kFourSpades = "4Spades", kFiveSpades = "5Spades"
+let kSixSpades = "6Spades", kSevenSpades = "7Spades", kEightSpades = "8Spades", kNineSpades = "9Spades"
+let kTenSpades = "10Spades", kJackSpades = "JackSpades", kQueenSpades = "QueenSpades", kKingSpades = "KingSpades"
 
 let kAceHearts = "AceHearts"
-let kTwoHearts = "TwoHearts", kThreeHearts = "ThreeHearts", kFourHearts = "FourHearts", kFiveHearts = "FiveHearts"
-let kSixHearts = "SixHearts", kSevenHearts = "SevenHearts", kEightHearts = "EightHearts", kNineHearts = "NineHearts"
-let kTenHearts = "TenHearts", kJackHearts = "JackHearts", kQueenHearts = "QueenHearts", kKingHearts = "KingHearts"
+let kTwoHearts = "2Hearts", kThreeHearts = "3Hearts", kFourHearts = "4Hearts", kFiveHearts = "5Hearts"
+let kSixHearts = "6Hearts", kSevenHearts = "7Hearts", kEightHearts = "8Hearts", kNineHearts = "9Hearts"
+let kTenHearts = "10Hearts", kJackHearts = "JackHearts", kQueenHearts = "QueenHearts", kKingHearts = "KingHearts"
 
 let kAceClubs = "AceClubs"
-let kTwoClubs = "TwoClubs", kThreeClubs = "ThreeClubs", kFourClubs = "FourClubs", kFiveClubs = "FiveClubs"
-let kSixClubs = "SixClubs", kSevenClubs = "SevenClubs", kEightClubs = "EightClubs", kNineClubs = "NineClubs"
-let kTenClubs = "TenClubs", kJackClubs = "JackClubs", kQueenClubs = "QueenClubs", kKingClubs = "KingClubs"
+let kTwoClubs = "2Clubs", kThreeClubs = "3Clubs", kFourClubs = "4Clubs", kFiveClubs = "5Clubs"
+let kSixClubs = "6Clubs", kSevenClubs = "7Clubs", kEightClubs = "8Clubs", kNineClubs = "9Clubs"
+let kTenClubs = "10Clubs", kJackClubs = "JackClubs", kQueenClubs = "QueenClubs", kKingClubs = "KingClubs"
 
 let kAceDiamonds = "AceDiamonds"
-let kTwoDiamonds = "TwoDiamonds", kThreeDiamonds = "ThreeDiamonds", kFourDiamonds = "FourDiamonds", kFiveDiamonds = "FiveDiamonds"
-let kSixDiamonds = "SixDiamonds", kSevenDiamonds = "SevenDiamonds", kEightDiamonds = "EightDiamonds", kNineDiamonds = "NineDiamonds"
-let kTenDiamonds = "TenDiamonds", kJackDiamonds = "JackDiamonds", kQueenDiamonds = "QueenDiamonds", kKingDiamonds = "KingDiamonds"
+let kTwoDiamonds = "2Diamonds", kThreeDiamonds = "3Diamonds", kFourDiamonds = "4Diamonds", kFiveDiamonds = "5Diamonds"
+let kSixDiamonds = "6Diamonds", kSevenDiamonds = "7Diamonds", kEightDiamonds = "8Diamonds", kNineDiamonds = "9Diamonds"
+let kTenDiamonds = "10Diamonds", kJackDiamonds = "JackDiamonds", kQueenDiamonds = "QueenDiamonds", kKingDiamonds = "KingDiamonds"
 
 internal func getImage(name:String) -> UIImage {
     guard let myImage = UIImage(named:name) else {
@@ -58,116 +58,116 @@ enum CardItem: Int {
         switch self {
         // Spades:
         case .AceSpades:
-            return(kAce,kSpades,getImage(kAceSpades))
+            return(kAce, kSpades, UIColor.blackColor(), getImage(kAceSpades))
         case .TwoSpades:
-            return(kTwo,kSpades,getImage(kTwoSpades))
+            return(kTwo, kSpades, UIColor.blackColor(), getImage(kTwoSpades))
         case .ThreeSpades:
-            return(kThree,kSpades,getImage(kThreeSpades))
+            return(kThree, kSpades, UIColor.blackColor(), getImage(kThreeSpades))
         case .FourSpades:
-            return(kFour,kSpades,getImage(kFourSpades))
+            return(kFour, kSpades, UIColor.blackColor(), getImage(kFourSpades))
         case .FiveSpades:
-            return(kFive,kSpades,getImage(kFiveSpades))
+            return(kFive, kSpades, UIColor.blackColor(), getImage(kFiveSpades))
         case .SixSpades:
-            return(kSix,kSpades,getImage(kSixSpades))
+            return(kSix, kSpades, UIColor.blackColor(), getImage(kSixSpades))
         case .SevenSpades:
-            return(kSeven,kSpades,getImage(kSevenSpades))
+            return(kSeven, kSpades, UIColor.blackColor(), getImage(kSevenSpades))
         case .EightSpades:
-            return(kEight,kSpades,getImage(kEightSpades))
+            return(kEight, kSpades, UIColor.blackColor(), getImage(kEightSpades))
         case .NineSpades:
-            return(kNine,kSpades,getImage(kNineSpades))
+            return(kNine, kSpades, UIColor.blackColor(), getImage(kNineSpades))
         case .TenSpades:
-            return(kTen, kSpades,getImage(kTenSpades))
+            return(kTen, kSpades, UIColor.blackColor(), getImage(kTenSpades))
         case .JackSpades:
-            return(kJack, kSpades,getImage(kJackSpades))
+            return(kJack, kSpades, UIColor.blackColor(), getImage(kJackSpades))
         case .QueenSpades:
-            return(kQueen, kSpades,getImage(kQueenSpades))
+            return(kQueen, kSpades, UIColor.blackColor(), getImage(kQueenSpades))
         case .KingSpades:
-            return(kKing, kSpades,getImage(kKingSpades))
+            return(kKing, kSpades, UIColor.blackColor(), getImage(kKingSpades))
             
         // Hearts:
         case .AceHearts:
-            return(kAce,kHearts,getImage(kAceHearts))
+            return(kAce, kHearts, UIColor.redColor(), getImage(kAceHearts))
         case .TwoHearts:
-            return(kTwo,kHearts,getImage(kTwoHearts))
+            return(kTwo, kHearts, UIColor.redColor(), getImage(kTwoHearts))
         case .ThreeHearts:
-            return(kThree,kHearts,getImage(kThreeHearts))
+            return(kThree, kHearts, UIColor.redColor(), getImage(kThreeHearts))
         case .FourHearts:
-            return(kFour,kHearts,getImage(kFourHearts))
+            return(kFour, kHearts, UIColor.redColor(), getImage(kFourHearts))
         case .FiveHearts:
-            return(kFive,kHearts,getImage(kFiveHearts))
+            return(kFive, kHearts, UIColor.redColor(), getImage(kFiveHearts))
         case .SixHearts:
-            return(kSix,kHearts,getImage(kSixHearts))
+            return(kSix, kHearts, UIColor.redColor(), getImage(kSixHearts))
         case .SevenHearts:
-            return(kSeven,kHearts,getImage(kSevenHearts))
+            return(kSeven, kHearts, UIColor.redColor(), getImage(kSevenHearts))
         case .EightHearts:
-            return(kEight,kHearts,getImage(kEightHearts))
+            return(kEight, kHearts, UIColor.redColor(), getImage(kEightHearts))
         case .NineHearts:
-            return(kNine,kHearts,getImage(kNineHearts))
+            return(kNine, kHearts, UIColor.redColor(), getImage(kNineHearts))
         case .TenHearts:
-            return(kTen, kHearts,getImage(kTenHearts))
+            return(kTen, kHearts, UIColor.redColor(), getImage(kTenHearts))
         case .JackHearts:
-            return(kJack, kHearts,getImage(kJackHearts))
+            return(kJack, kHearts, UIColor.redColor(), getImage(kJackHearts))
         case .QueenHearts:
-            return(kQueen, kHearts,getImage(kQueenHearts))
+            return(kQueen, kHearts, UIColor.redColor(), getImage(kQueenHearts))
         case .KingHearts:
-            return(kKing, kHearts,getImage(kKingHearts))
+            return(kKing, kHearts, UIColor.redColor(), getImage(kKingHearts))
             
         // Clubs:
         case .AceClubs:
-            return(kAce,kClubs,getImage(kAceClubs))
+            return(kAce, kClubs, UIColor.blackColor(), getImage(kAceClubs))
         case .TwoClubs:
-            return(kTwo,kClubs,getImage(kTwoClubs))
+            return(kTwo, kClubs, UIColor.blackColor(), getImage(kTwoClubs))
         case .ThreeClubs:
-            return(kThree,kClubs,getImage(kThreeClubs))
+            return(kThree, kClubs, UIColor.blackColor(), getImage(kThreeClubs))
         case .FourClubs:
-            return(kFour,kClubs,getImage(kFourClubs))
+            return(kFour, kClubs, UIColor.blackColor(), getImage(kFourClubs))
         case .FiveClubs:
-            return(kFive,kClubs,getImage(kFiveClubs))
+            return(kFive, kClubs, UIColor.blackColor(), getImage(kFiveClubs))
         case .SixClubs:
-            return(kSix,kClubs,getImage(kSixClubs))
+            return(kSix, kClubs, UIColor.blackColor(), getImage(kSixClubs))
         case .SevenClubs:
-            return(kSeven,kClubs,getImage(kSevenClubs))
+            return(kSeven, kClubs, UIColor.blackColor(), getImage(kSevenClubs))
         case .EightClubs:
-            return(kEight,kClubs,getImage(kEightClubs))
+            return(kEight, kClubs, UIColor.blackColor(), getImage(kEightClubs))
         case .NineClubs:
-            return(kNine,kClubs,getImage(kNineClubs))
+            return(kNine, kClubs,  UIColor.blackColor(), getImage(kNineClubs))
         case .TenClubs:
-            return(kTen, kClubs,getImage(kTenClubs))
+            return(kTen, kClubs, UIColor.blackColor(), getImage(kTenClubs))
         case .JackClubs:
-            return(kJack, kClubs,getImage(kJackClubs))
+            return(kJack, kClubs, UIColor.blackColor(), getImage(kJackClubs))
         case .QueenClubs:
-            return(kQueen, kClubs,getImage(kQueenClubs))
+            return(kQueen, kClubs, UIColor.blackColor(), getImage(kQueenClubs))
         case .KingClubs:
-            return(kKing, kClubs,getImage(kKingClubs))
+            return(kKing, kClubs, UIColor.blackColor(), getImage(kKingClubs))
             
             
         // Diamonds:
         case .AceDiamonds:
-            return(kAce,kDiamonds,getImage(kAceDiamonds))
+            return(kAce, kDiamonds,UIColor.redColor(), getImage(kAceDiamonds))
         case .TwoDiamonds:
-            return(kTwo,kDiamonds,getImage(kTwoDiamonds))
+            return(kTwo, kDiamonds,UIColor.redColor(), getImage(kTwoDiamonds))
         case .ThreeDiamonds:
-            return(kThree,kDiamonds,getImage(kThreeDiamonds))
+            return(kThree, kDiamonds,UIColor.redColor(), getImage(kThreeDiamonds))
         case .FourDiamonds:
-            return(kFour,kDiamonds,getImage(kFourDiamonds))
+            return(kFour, kDiamonds,UIColor.redColor(), getImage(kFourDiamonds))
         case .FiveDiamonds:
-            return(kFive,kDiamonds,getImage(kFiveDiamonds))
+            return(kFive, kDiamonds,UIColor.redColor(), getImage(kFiveDiamonds))
         case .SixDiamonds:
-            return(kSix,kDiamonds,getImage(kSixDiamonds))
+            return(kSix, kDiamonds,UIColor.redColor(), getImage(kSixDiamonds))
         case .SevenDiamonds:
-            return(kSeven,kDiamonds,getImage(kSevenDiamonds))
+            return(kSeven, kDiamonds,UIColor.redColor(), getImage(kSevenDiamonds))
         case .EightDiamonds:
-            return(kEight,kDiamonds,getImage(kEightDiamonds))
+            return(kEight, kDiamonds,UIColor.redColor(), getImage(kEightDiamonds))
         case .NineDiamonds:
-            return(kNine,kDiamonds,getImage(kNineDiamonds))
+            return(kNine, kDiamonds,UIColor.redColor(), getImage(kNineDiamonds))
         case .TenDiamonds:
-            return(kTen, kDiamonds,getImage(kTenDiamonds))
+            return(kTen, kDiamonds,UIColor.redColor(), getImage(kTenDiamonds))
         case .JackDiamonds:
-            return(kJack, kDiamonds,getImage(kJackDiamonds))
+            return(kJack, kDiamonds,UIColor.redColor(), getImage(kJackDiamonds))
         case .QueenDiamonds:
-            return(kQueen, kDiamonds,getImage(kQueenDiamonds))
+            return(kQueen, kDiamonds,UIColor.redColor(), getImage(kQueenDiamonds))
         case .KingDiamonds:
-            return(kKing, kDiamonds,getImage(kKingDiamonds))
+            return(kKing, kDiamonds,UIColor.redColor(), getImage(kKingDiamonds))
         }
     }
 }
@@ -228,9 +228,10 @@ class CardCell:UITableViewCell {
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var cardImageView:UIImageView!
     func fillWith(card:Card) {
-//        rankLabel.textColor = card.suit.color()
-//        rankLabel.text = card.rank.simpleDescription()
-//        suitLabel.text = card.suit.simpleDescription()
+        rankLabel.textColor = card.cardTupple.color
+        rankLabel.text = card.cardTupple.rank
+        suitLabel.text = card.cardTupple.suit
+        cardImageView.image = card.cardTupple.image
     }
 }
 
