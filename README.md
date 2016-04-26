@@ -2,7 +2,7 @@
 Exploring Functional, Prototype and Object-Oriented combo Swift
 
 A Swift application is more than just an Objective-C app translated into Swift.
-Swift offers distinct (futuristic) design patterns that yields safer run-time code than Objective-C.
+Swift offers distinct (futuristic) design patterns that yield safer run-time code than Objective-C.
 
 This project grew out of assorted sources (i.e., Apple's 'The Swift Programming Language' book, and assorted on-line forums and lectures) to incorporate the following patterns: 
 - Functional Programming,
