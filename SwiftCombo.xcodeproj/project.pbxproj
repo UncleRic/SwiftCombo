@@ -95,11 +95,10 @@
 				18452A561CCAC76600938F19 /* ClubsViewController.swift */,
 				18452A791CCAE60700938F19 /* CardModel.swift */,
 				183F51271CCBFAC9008A4F20 /* DataSource.swift */,
-				18452A5A1CCAC76600938F19 /* Main.storyboard */,
 				18452A5D1CCAC76600938F19 /* Assets.xcassets */,
 				18452A5F1CCAC76600938F19 /* LaunchScreen.storyboard */,
 				18452A621CCAC76600938F19 /* Info.plist */,
-				183F51291CCC22E6008A4F20 /* CardTableViewCell.xib */,
+				18C7ED731CCFE61400944CE4 /* UI */,
 			);
 			path = SwiftCombo;
 			sourceTree = "<group>";
@@ -111,6 +110,15 @@
 				18452A6D1CCAC76600938F19 /* Info.plist */,
 			);
 			path = SwiftComboTests;
+			sourceTree = "<group>";
+		};
+		18C7ED731CCFE61400944CE4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				18452A5A1CCAC76600938F19 /* Main.storyboard */,
+				183F51291CCC22E6008A4F20 /* CardTableViewCell.xib */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

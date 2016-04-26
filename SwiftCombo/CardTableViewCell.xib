@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="323" height="65.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AceOfClubs" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-nX-TKK">
+                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AceSpades" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-nX-TKK">
                         <rect key="frame" x="6" y="3" width="42" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="lFg-nX-TKK" secondAttribute="height" multiplier="2:2.5" constant="-6" id="7D9-9B-2iq"/>
@@ -62,6 +62,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="AceOfClubs" width="150" height="209"/>
+        <image name="AceSpades" width="194" height="272"/>
     </resources>
 </document>
