@@ -1,4 +1,4 @@
-//  ClubsViewController.swift
+//  HandViewController.swift
 //  SwiftCombo
 //
 //  Created by Frederick C. Lee on 4/22/16.
@@ -10,7 +10,7 @@ import UIKit
 let kCellIdentifier = "CardCell"
 var deck:[Card]?
 
-class ClubsViewController: UIViewController {
+class HandViewController: UIViewController {
     
     private var hand = Hand()
     private let datasource = CardDataSource()

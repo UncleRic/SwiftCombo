@@ -36,7 +36,7 @@ class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath:indexPath) as? CardCell
             else {
-            fatalError("Could not create Card cell or Hand Instance.")
+            fatalError("Could not create Card cell.")
         }
         
         cell.fillWith(hand[indexPath.row])
