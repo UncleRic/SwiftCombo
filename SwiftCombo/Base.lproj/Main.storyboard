@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Clubs View Controller-->
+        <!--Hand View Controller-->
         <scene sceneID="DnV-km-ahT">
             <objects>
-                <viewController id="9Xq-JR-6Hj" customClass="ClubsViewController" customModule="SwiftCombo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9Xq-JR-6Hj" customClass="HandViewController" customModule="SwiftCombo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="war-vd-vv4"/>
                         <viewControllerLayoutGuide type="bottom" id="YEp-tr-IkZ"/>
@@ -141,8 +141,8 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="emptyLabel" destination="GEv-w4-SVK" id="Wcj-oX-vC7"/>
-                        <outlet property="gTableView" destination="ovE-M9-OcL" id="cFz-1i-WYe"/>
+                        <outlet property="emptyLabel" destination="GEv-w4-SVK" id="xhf-jq-2AG"/>
+                        <outlet property="gTableView" destination="ovE-M9-OcL" id="9Qp-Zn-xQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okv-Dw-MY4" userLabel="First Responder" sceneMemberID="firstResponder"/>

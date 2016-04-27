@@ -34,7 +34,7 @@ class HandViewController: UIViewController {
     
     @IBAction func NewHand(sender: UIBarButtonItem) {
         deck = createDeck()
-        dataSource.hand = hand.createFullHand()
+        dataSource.dataObject = hand.createFullHand()
         gTableView.hidden = false
         gTableView.reloadData()
     }

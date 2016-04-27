@@ -10,7 +10,7 @@ import UIKit
 typealias CardTupple = (rank:String, suit:String, color:UIColor, image:UIImage)
 
 let kSpades = "Spades", kHearts = "Hearts", kClubs = "Clubs", kDiamonds = "Diamonds"
-let kAce = "Act", kTwo = "Two", kThree = "Three", kFour = "Four", kFive = "Five"
+let kAce = "Ace", kTwo = "Two", kThree = "Three", kFour = "Four", kFive = "Five"
 let kSix = "Six", kSeven = "Seven", kEight = "Eight", kNine = "Nine", kTen = "Ten"
 let kJack = "Jack", kQueen = "Queen", kKing = "King"
 
