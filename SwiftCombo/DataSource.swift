@@ -49,5 +49,10 @@ class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
                    editingStyle: UITableViewCellEditingStyle,
                    forRowAtIndexPath indexPath: NSIndexPath) {
         
+        if editingStyle == .Delete {
+            hand.deleteItemAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        
     }
 }
