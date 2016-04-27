@@ -13,14 +13,14 @@ var deck:[Card]?
 class HandViewController: UIViewController {
     
     private var hand = Hand()
-    private let datasource = CardDataSource()
+    private let dataSource = CardDataSource()
     
     @IBOutlet weak var gTableView: UITableView!
     @IBOutlet weak var emptyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gTableView.dataSource = datasource
+        gTableView.dataSource = dataSource
         let myNib = UINib(nibName: "CardTableViewCell",bundle: nil)
         gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
     }
@@ -34,16 +34,13 @@ class HandViewController: UIViewController {
     
     @IBAction func NewHand(sender: UIBarButtonItem) {
         deck = createDeck()
-        datasource.hand = hand.createFullHand()
+        dataSource.hand = hand.createFullHand()
         gTableView.hidden = false
         gTableView.reloadData()
     }
     
     @IBAction func addCardAction(sender: UIBarButtonItem) {
-        if hand.numberOfItems < 5 {
-            hand = hand.addNewItemAtIndex(0)
-            datasource.insertTopRowIn(gTableView)
-        }
+        dataSource.addItemTo(gTableView)
     }
     
     @IBAction func exitAction(sender: UIBarButtonItem) {

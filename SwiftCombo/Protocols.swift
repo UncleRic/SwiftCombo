@@ -18,6 +18,7 @@ protocol SourceTypeProtocol:UITableViewDataSource {
     // ...dataObject could be ANY model type.  The conforming code set it to 'Hand'.
     // 'dataObject' had both a getter & setter:
     var dataObject:DataTypeProtocol{get set}
+    var conditionForAdding: Bool {get}
     func insertTopRowIn(tableView:UITableView)
     func deleteRowAtIndexPath(indexPath:NSIndexPath, from tableView:UITableView)
 }
