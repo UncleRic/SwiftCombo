@@ -12,7 +12,7 @@ var deck:[Card]?
 
 class ClubsViewController: UIViewController {
     
-    private let hand = Hand()
+    private var hand = Hand()
     private let datasource = CardDataSource()
     
     @IBOutlet weak var gTableView: UITableView!
@@ -41,7 +41,7 @@ class ClubsViewController: UIViewController {
     
     @IBAction func addCardAction(sender: UIBarButtonItem) {
         if hand.numberOfItems < 5 {
-            hand.addNewItemAtIndex(0)
+            hand = hand.addNewItemAtIndex(0)
             datasource.insertTopRowIn(gTableView)
         }
     }

@@ -237,7 +237,8 @@ struct Hand:DataTypeProtocol {
     func itemAtPosition(index:Int) -> Card {
         return cards[index]
     }
-    
+    // -------------------------------------------------------------
+    // Add Item:
     private func insertItem(atIndex index:Int) -> Hand {
         var mutableCards = cards
         mutableCards.insert(mutableCards[0], atIndex: index)
@@ -248,19 +249,33 @@ struct Hand:DataTypeProtocol {
         return insertItem(atIndex:index)
     }
     
-    func deleteItemAtIndex(index:Int) -> Hand {
-        return self
-        // cards.removeAtIndex(index)
+    // -------------------------------------------------------------
+    // Remove Item:
+    
+    private func removeItem(atIndex index:Int) -> Hand {
+        var mutableCards = cards
+        mutableCards.removeAtIndex(index)
+        return Hand(cards:mutableCards)
+    }
+    
+    internal func deleteItemAtIndex(index:Int) -> Hand {
+        return removeItem(atIndex:index)
+    }
+    
+    // -------------------------------------------------------------
+    // Move Item:
+    
+    private func insertItem(card: Card, atIndex index: Int) -> Hand {
+        var mutableCards = cards
+        mutableCards.insert(card, atIndex: index)
+        return Hand(cards:mutableCards)
     }
     
     func moveItem(fromIndex:Int, toIndex:Int) -> Hand {
-        return self
-        //        let cardToMove = cards[fromIndex]
-        //        deleteItemAtIndex(fromIndex)
-        //        insertItem(cardToMove, atIndex:toIndex)
+        let cardToMove = cards[fromIndex]
+        deleteItemAtIndex(fromIndex)
+        return insertItem(cardToMove, atIndex:toIndex)
     }
-    
-    
 }
 
 
