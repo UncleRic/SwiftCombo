@@ -11,9 +11,14 @@ import UIKit
 class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
     
     internal var hand = Hand()
+    var dataObject:DataTypeProtocol = Hand()
+    
+    var conditionForAdding: Bool {
+        return dataObject.numberOfItems < 5
+    }
     
     func addItemTo(tableView:UITableView) {
-        if hand.numberOfItems < 5 {
+        if conditionForAdding {
             hand = hand.addNewItemAtIndex(0)
             insertTopRowIn(tableView)
         }

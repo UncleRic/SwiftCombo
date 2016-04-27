@@ -15,11 +15,15 @@ import UIKit
 // SourceTypeProtocol conforms to UITableViewDataSource
 
 protocol SourceTypeProtocol:UITableViewDataSource {
+    var dataObject:DataTypeProtocol{get set}
     func insertTopRowIn(tableView:UITableView)
     func deleteRowAtIndexPath(indexPath:NSIndexPath, from tableView:UITableView)
 }
 
 extension SourceTypeProtocol {
+    var conditionForAdding:Bool {
+        return dataObject.numberOfItems < 5
+    }
     func insertTopRowIn(tableView:UITableView) {
         tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Fade)
     }
