@@ -19,7 +19,7 @@ class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
     
     func addItemTo(tableView:UITableView) {
         if conditionForAdding {
-            hand = hand.addNewItemAtIndex(0)
+            dataObject = dataObject.addNewItemAtIndex(0)
             insertTopRowIn(tableView)
         }
     }
@@ -27,7 +27,7 @@ class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
     // -----------------------------------------------------------------------------------------------------
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hand.numberOfItems
+        return dataObject.numberOfItems
     }
     
     // -----------------------------------------------------------------------------------------------------
@@ -52,7 +52,7 @@ class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
         
         if editingStyle == .Delete {
             // 1) Delete from the model:
-            hand.deleteItemAtIndex(indexPath.row)
+            dataObject = dataObject.deleteItemAtIndex(indexPath.row)
             // 2) Delete from the View:
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
