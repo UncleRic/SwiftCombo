@@ -272,9 +272,8 @@ struct Hand:DataTypeProtocol {
     }
     
     func moveItem(fromIndex:Int, toIndex:Int) -> Hand {
-        let cardToMove = cards[fromIndex]
-        deleteItemAtIndex(fromIndex)
-        return insertItem(cardToMove, atIndex:toIndex)
+        // Notice the functional approach:
+        return deleteItemAtIndex(fromIndex).insertItem(cards[fromIndex], atIndex:toIndex)
     }
 }
 
