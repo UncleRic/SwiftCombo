@@ -13,7 +13,7 @@ var deck:[Card]?
 class HandViewController: UIViewController {
     
     private var hand = Hand()
-    private let dataSource = CardDataSource()
+    private var dataSource = HandDataSource()
     
     @IBOutlet weak var gTableView: UITableView!
     @IBOutlet weak var emptyLabel: UILabel!

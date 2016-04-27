@@ -8,15 +8,22 @@
 import Foundation
 import UIKit
 
-class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
+class DataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
     
     internal var hand = Hand()
+    
     var dataObject:DataTypeProtocol = Hand()  // ...dataObject can be any model; in this case, a Hand.
     
     var conditionForAdding: Bool {
-        return dataObject.numberOfItems < 5
+        return false
     }
+
+    // -----------------------------------------------------
     
+    init<A:DataTypeProtocol>(dataObject:A) {
+        self.dataObject = dataObject
+    }
+
     func addItemTo(tableView:UITableView) {
         if conditionForAdding {
             hand = hand.addNewItemAtIndex(0)
@@ -27,13 +34,44 @@ class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
     // -----------------------------------------------------------------------------------------------------
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hand.numberOfItems
+        return dataObject.numberOfItems
     }
     
     // -----------------------------------------------------------------------------------------------------
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        fatalError("This method must be overridden.")
+    }
+    
+    // -----------------------------------------------------------------------------------------------------
+    
+    func tableView(tableView: UITableView, commitEditingStyle
+        editingStyle: UITableViewCellEditingStyle,
+        forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete {
+            // 1) Delete from the model:
+            hand.deleteItemAtIndex(indexPath.row)
+            // 2) Delete from the View:
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
+}
+
+// ===================================================================================================
+
+class HandDataSource:DataSource {
+    
+    init() {
+        super.init(dataObject:Hand())
+    }
+    
+    override var conditionForAdding: Bool {
+        return dataObject.numberOfItems < 5
+    }
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath:indexPath) as? CardCell,
         hand = dataObject as? Hand
             else {
@@ -44,18 +82,4 @@ class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
         return cell
     }
     
-    // -----------------------------------------------------------------------------------------------------
-    
-    func tableView(tableView: UITableView, commitEditingStyle
-                   editingStyle: UITableViewCellEditingStyle,
-                   forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if editingStyle == .Delete {
-            // 1) Delete from the model:
-            hand.deleteItemAtIndex(indexPath.row)
-            // 2) Delete from the View:
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        }
-        
-    }
 }
