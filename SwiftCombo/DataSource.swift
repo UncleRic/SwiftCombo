@@ -11,7 +11,7 @@ import UIKit
 class CardDataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
     
     internal var hand = Hand()
-    var dataObject:DataTypeProtocol = Hand()
+    var dataObject:DataTypeProtocol = Hand()  // ...dataObject can be any model; in this case, a Hand.
     
     var conditionForAdding: Bool {
         return dataObject.numberOfItems < 5

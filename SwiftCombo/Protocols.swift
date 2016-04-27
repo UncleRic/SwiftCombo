@@ -15,6 +15,8 @@ import UIKit
 // SourceTypeProtocol conforms to UITableViewDataSource
 
 protocol SourceTypeProtocol:UITableViewDataSource {
+    // ...dataObject could be ANY model type.  The conforming code set it to 'Hand'.
+    // 'dataObject' had both a getter & setter:
     var dataObject:DataTypeProtocol{get set}
     func insertTopRowIn(tableView:UITableView)
     func deleteRowAtIndexPath(indexPath:NSIndexPath, from tableView:UITableView)
@@ -33,7 +35,8 @@ extension SourceTypeProtocol {
 }
 
 // -----------------------------------------------------------------------------------------------------
-// Model depends on the following methods within DataTypeProtocol:
+// The model depends on the following methods within DataTypeProtocol.
+// The model must perform the following functions (conform to protocol) to avoid the protocol-breach compiler error:
 
 protocol DataTypeProtocol {
     var numberOfItems:Int{get}
