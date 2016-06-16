@@ -34,7 +34,7 @@ let kTwoDiamonds = "2Diamonds", kThreeDiamonds = "3Diamonds", kFourDiamonds = "4
 let kSixDiamonds = "6Diamonds", kSevenDiamonds = "7Diamonds", kEightDiamonds = "8Diamonds", kNineDiamonds = "9Diamonds"
 let kTenDiamonds = "10Diamonds", kJackDiamonds = "JackDiamonds", kQueenDiamonds = "QueenDiamonds", kKingDiamonds = "KingDiamonds"
 
-internal func getImage(name:String) -> UIImage {
+internal func getImage(_ name:String) -> UIImage {
     guard let myImage = UIImage(named:name) else {
         fatalError("Missing UIImage: \(name)")
     }
@@ -42,132 +42,132 @@ internal func getImage(name:String) -> UIImage {
 }
 
 enum CardItem: Int {
-    case AceSpades = 1
-    case TwoSpades, ThreeSpades, FourSpades, FiveSpades, SixSpades, SevenSpades,
-    EightSpades, NineSpades, TenSpades, JackSpades, QueenSpades, KingSpades
-    case AceHearts
-    case TwoHearts, ThreeHearts, FourHearts, FiveHearts, SixHearts, SevenHearts,
-    EightHearts, NineHearts, TenHearts, JackHearts, QueenHearts, KingHearts
-    case AceClubs
-    case TwoClubs, ThreeClubs, FourClubs, FiveClubs, SixClubs, SevenClubs,
-    EightClubs, NineClubs, TenClubs, JackClubs, QueenClubs, KingClubs
-    case AceDiamonds
-    case TwoDiamonds, ThreeDiamonds, FourDiamonds, FiveDiamonds, SixDiamonds, SevenDiamonds,
-    EightDiamonds, NineDiamonds, TenDiamonds, JackDiamonds, QueenDiamonds, KingDiamonds
+    case aceSpades = 1
+    case twoSpades, threeSpades, fourSpades, fiveSpades, sixSpades, sevenSpades,
+    eightSpades, nineSpades, tenSpades, jackSpades, queenSpades, kingSpades
+    case aceHearts
+    case twoHearts, threeHearts, fourHearts, fiveHearts, sixHearts, sevenHearts,
+    eightHearts, nineHearts, tenHearts, jackHearts, queenHearts, kingHearts
+    case aceClubs
+    case twoClubs, threeClubs, fourClubs, fiveClubs, sixClubs, sevenClubs,
+    eightClubs, nineClubs, tenClubs, jackClubs, queenClubs, kingClubs
+    case aceDiamonds
+    case twoDiamonds, threeDiamonds, fourDiamonds, fiveDiamonds, sixDiamonds, sevenDiamonds,
+    eightDiamonds, nineDiamonds, tenDiamonds, jackDiamonds, queenDiamonds, kingDiamonds
     func Description() -> CardTupple {
         switch self {
         // Spades:
-        case .AceSpades:
-            return(kAce, kSpades, UIColor.blackColor(), getImage(kAceSpades))
-        case .TwoSpades:
-            return(kTwo, kSpades, UIColor.blackColor(), getImage(kTwoSpades))
-        case .ThreeSpades:
-            return(kThree, kSpades, UIColor.blackColor(), getImage(kThreeSpades))
-        case .FourSpades:
-            return(kFour, kSpades, UIColor.blackColor(), getImage(kFourSpades))
-        case .FiveSpades:
-            return(kFive, kSpades, UIColor.blackColor(), getImage(kFiveSpades))
-        case .SixSpades:
-            return(kSix, kSpades, UIColor.blackColor(), getImage(kSixSpades))
-        case .SevenSpades:
-            return(kSeven, kSpades, UIColor.blackColor(), getImage(kSevenSpades))
-        case .EightSpades:
-            return(kEight, kSpades, UIColor.blackColor(), getImage(kEightSpades))
-        case .NineSpades:
-            return(kNine, kSpades, UIColor.blackColor(), getImage(kNineSpades))
-        case .TenSpades:
-            return(kTen, kSpades, UIColor.blackColor(), getImage(kTenSpades))
-        case .JackSpades:
-            return(kJack, kSpades, UIColor.blackColor(), getImage(kJackSpades))
-        case .QueenSpades:
-            return(kQueen, kSpades, UIColor.blackColor(), getImage(kQueenSpades))
-        case .KingSpades:
-            return(kKing, kSpades, UIColor.blackColor(), getImage(kKingSpades))
+        case .aceSpades:
+            return(kAce, kSpades, UIColor.black(), getImage(kAceSpades))
+        case .twoSpades:
+            return(kTwo, kSpades, UIColor.black(), getImage(kTwoSpades))
+        case .threeSpades:
+            return(kThree, kSpades, UIColor.black(), getImage(kThreeSpades))
+        case .fourSpades:
+            return(kFour, kSpades, UIColor.black(), getImage(kFourSpades))
+        case .fiveSpades:
+            return(kFive, kSpades, UIColor.black(), getImage(kFiveSpades))
+        case .sixSpades:
+            return(kSix, kSpades, UIColor.black(), getImage(kSixSpades))
+        case .sevenSpades:
+            return(kSeven, kSpades, UIColor.black(), getImage(kSevenSpades))
+        case .eightSpades:
+            return(kEight, kSpades, UIColor.black(), getImage(kEightSpades))
+        case .nineSpades:
+            return(kNine, kSpades, UIColor.black(), getImage(kNineSpades))
+        case .tenSpades:
+            return(kTen, kSpades, UIColor.black(), getImage(kTenSpades))
+        case .jackSpades:
+            return(kJack, kSpades, UIColor.black(), getImage(kJackSpades))
+        case .queenSpades:
+            return(kQueen, kSpades, UIColor.black(), getImage(kQueenSpades))
+        case .kingSpades:
+            return(kKing, kSpades, UIColor.black(), getImage(kKingSpades))
             
         // Hearts:
-        case .AceHearts:
-            return(kAce, kHearts, UIColor.redColor(), getImage(kAceHearts))
-        case .TwoHearts:
-            return(kTwo, kHearts, UIColor.redColor(), getImage(kTwoHearts))
-        case .ThreeHearts:
-            return(kThree, kHearts, UIColor.redColor(), getImage(kThreeHearts))
-        case .FourHearts:
-            return(kFour, kHearts, UIColor.redColor(), getImage(kFourHearts))
-        case .FiveHearts:
-            return(kFive, kHearts, UIColor.redColor(), getImage(kFiveHearts))
-        case .SixHearts:
-            return(kSix, kHearts, UIColor.redColor(), getImage(kSixHearts))
-        case .SevenHearts:
-            return(kSeven, kHearts, UIColor.redColor(), getImage(kSevenHearts))
-        case .EightHearts:
-            return(kEight, kHearts, UIColor.redColor(), getImage(kEightHearts))
-        case .NineHearts:
-            return(kNine, kHearts, UIColor.redColor(), getImage(kNineHearts))
-        case .TenHearts:
-            return(kTen, kHearts, UIColor.redColor(), getImage(kTenHearts))
-        case .JackHearts:
-            return(kJack, kHearts, UIColor.redColor(), getImage(kJackHearts))
-        case .QueenHearts:
-            return(kQueen, kHearts, UIColor.redColor(), getImage(kQueenHearts))
-        case .KingHearts:
-            return(kKing, kHearts, UIColor.redColor(), getImage(kKingHearts))
+        case .aceHearts:
+            return(kAce, kHearts, UIColor.red(), getImage(kAceHearts))
+        case .twoHearts:
+            return(kTwo, kHearts, UIColor.red(), getImage(kTwoHearts))
+        case .threeHearts:
+            return(kThree, kHearts, UIColor.red(), getImage(kThreeHearts))
+        case .fourHearts:
+            return(kFour, kHearts, UIColor.red(), getImage(kFourHearts))
+        case .fiveHearts:
+            return(kFive, kHearts, UIColor.red(), getImage(kFiveHearts))
+        case .sixHearts:
+            return(kSix, kHearts, UIColor.red(), getImage(kSixHearts))
+        case .sevenHearts:
+            return(kSeven, kHearts, UIColor.red(), getImage(kSevenHearts))
+        case .eightHearts:
+            return(kEight, kHearts, UIColor.red(), getImage(kEightHearts))
+        case .nineHearts:
+            return(kNine, kHearts, UIColor.red(), getImage(kNineHearts))
+        case .tenHearts:
+            return(kTen, kHearts, UIColor.red(), getImage(kTenHearts))
+        case .jackHearts:
+            return(kJack, kHearts, UIColor.red(), getImage(kJackHearts))
+        case .queenHearts:
+            return(kQueen, kHearts, UIColor.red(), getImage(kQueenHearts))
+        case .kingHearts:
+            return(kKing, kHearts, UIColor.red(), getImage(kKingHearts))
             
         // Clubs:
-        case .AceClubs:
-            return(kAce, kClubs, UIColor.blackColor(), getImage(kAceClubs))
-        case .TwoClubs:
-            return(kTwo, kClubs, UIColor.blackColor(), getImage(kTwoClubs))
-        case .ThreeClubs:
-            return(kThree, kClubs, UIColor.blackColor(), getImage(kThreeClubs))
-        case .FourClubs:
-            return(kFour, kClubs, UIColor.blackColor(), getImage(kFourClubs))
-        case .FiveClubs:
-            return(kFive, kClubs, UIColor.blackColor(), getImage(kFiveClubs))
-        case .SixClubs:
-            return(kSix, kClubs, UIColor.blackColor(), getImage(kSixClubs))
-        case .SevenClubs:
-            return(kSeven, kClubs, UIColor.blackColor(), getImage(kSevenClubs))
-        case .EightClubs:
-            return(kEight, kClubs, UIColor.blackColor(), getImage(kEightClubs))
-        case .NineClubs:
-            return(kNine, kClubs,  UIColor.blackColor(), getImage(kNineClubs))
-        case .TenClubs:
-            return(kTen, kClubs, UIColor.blackColor(), getImage(kTenClubs))
-        case .JackClubs:
-            return(kJack, kClubs, UIColor.blackColor(), getImage(kJackClubs))
-        case .QueenClubs:
-            return(kQueen, kClubs, UIColor.blackColor(), getImage(kQueenClubs))
-        case .KingClubs:
-            return(kKing, kClubs, UIColor.blackColor(), getImage(kKingClubs))
+        case .aceClubs:
+            return(kAce, kClubs, UIColor.black(), getImage(kAceClubs))
+        case .twoClubs:
+            return(kTwo, kClubs, UIColor.black(), getImage(kTwoClubs))
+        case .threeClubs:
+            return(kThree, kClubs, UIColor.black(), getImage(kThreeClubs))
+        case .fourClubs:
+            return(kFour, kClubs, UIColor.black(), getImage(kFourClubs))
+        case .fiveClubs:
+            return(kFive, kClubs, UIColor.black(), getImage(kFiveClubs))
+        case .sixClubs:
+            return(kSix, kClubs, UIColor.black(), getImage(kSixClubs))
+        case .sevenClubs:
+            return(kSeven, kClubs, UIColor.black(), getImage(kSevenClubs))
+        case .eightClubs:
+            return(kEight, kClubs, UIColor.black(), getImage(kEightClubs))
+        case .nineClubs:
+            return(kNine, kClubs,  UIColor.black(), getImage(kNineClubs))
+        case .tenClubs:
+            return(kTen, kClubs, UIColor.black(), getImage(kTenClubs))
+        case .jackClubs:
+            return(kJack, kClubs, UIColor.black(), getImage(kJackClubs))
+        case .queenClubs:
+            return(kQueen, kClubs, UIColor.black(), getImage(kQueenClubs))
+        case .kingClubs:
+            return(kKing, kClubs, UIColor.black(), getImage(kKingClubs))
             
             
         // Diamonds:
-        case .AceDiamonds:
-            return(kAce, kDiamonds,UIColor.redColor(), getImage(kAceDiamonds))
-        case .TwoDiamonds:
-            return(kTwo, kDiamonds,UIColor.redColor(), getImage(kTwoDiamonds))
-        case .ThreeDiamonds:
-            return(kThree, kDiamonds,UIColor.redColor(), getImage(kThreeDiamonds))
-        case .FourDiamonds:
-            return(kFour, kDiamonds,UIColor.redColor(), getImage(kFourDiamonds))
-        case .FiveDiamonds:
-            return(kFive, kDiamonds,UIColor.redColor(), getImage(kFiveDiamonds))
-        case .SixDiamonds:
-            return(kSix, kDiamonds,UIColor.redColor(), getImage(kSixDiamonds))
-        case .SevenDiamonds:
-            return(kSeven, kDiamonds,UIColor.redColor(), getImage(kSevenDiamonds))
-        case .EightDiamonds:
-            return(kEight, kDiamonds,UIColor.redColor(), getImage(kEightDiamonds))
-        case .NineDiamonds:
-            return(kNine, kDiamonds,UIColor.redColor(), getImage(kNineDiamonds))
-        case .TenDiamonds:
-            return(kTen, kDiamonds,UIColor.redColor(), getImage(kTenDiamonds))
-        case .JackDiamonds:
-            return(kJack, kDiamonds,UIColor.redColor(), getImage(kJackDiamonds))
-        case .QueenDiamonds:
-            return(kQueen, kDiamonds,UIColor.redColor(), getImage(kQueenDiamonds))
-        case .KingDiamonds:
-            return(kKing, kDiamonds,UIColor.redColor(), getImage(kKingDiamonds))
+        case .aceDiamonds:
+            return(kAce, kDiamonds,UIColor.red(), getImage(kAceDiamonds))
+        case .twoDiamonds:
+            return(kTwo, kDiamonds,UIColor.red(), getImage(kTwoDiamonds))
+        case .threeDiamonds:
+            return(kThree, kDiamonds,UIColor.red(), getImage(kThreeDiamonds))
+        case .fourDiamonds:
+            return(kFour, kDiamonds,UIColor.red(), getImage(kFourDiamonds))
+        case .fiveDiamonds:
+            return(kFive, kDiamonds,UIColor.red(), getImage(kFiveDiamonds))
+        case .sixDiamonds:
+            return(kSix, kDiamonds,UIColor.red(), getImage(kSixDiamonds))
+        case .sevenDiamonds:
+            return(kSeven, kDiamonds,UIColor.red(), getImage(kSevenDiamonds))
+        case .eightDiamonds:
+            return(kEight, kDiamonds,UIColor.red(), getImage(kEightDiamonds))
+        case .nineDiamonds:
+            return(kNine, kDiamonds,UIColor.red(), getImage(kNineDiamonds))
+        case .tenDiamonds:
+            return(kTen, kDiamonds,UIColor.red(), getImage(kTenDiamonds))
+        case .jackDiamonds:
+            return(kJack, kDiamonds,UIColor.red(), getImage(kJackDiamonds))
+        case .queenDiamonds:
+            return(kQueen, kDiamonds,UIColor.red(), getImage(kQueenDiamonds))
+        case .kingDiamonds:
+            return(kKing, kDiamonds,UIColor.red(), getImage(kKingDiamonds))
         }
     }
 }
@@ -178,7 +178,7 @@ class CardCell:UITableViewCell {
     @IBOutlet weak var suitLabel:UILabel!
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var cardImageView:UIImageView!
-    func fillWith(card:Card) {
+    func fillWith(_ card:Card) {
         rankLabel.textColor = card.cardTupple.color
         rankLabel.text = card.cardTupple.rank
         suitLabel.text = card.cardTupple.suit
@@ -210,7 +210,6 @@ struct Card {
 // ===================================================================================================
 
 
-
 struct Hand:DataTypeProtocol {
     private var cards = [Card]()
     
@@ -219,7 +218,7 @@ struct Hand:DataTypeProtocol {
         let numCards = 52
         for k in 0..<5 {
             let cardIndex = Int(arc4random_uniform(UInt32(numCards-k)))
-            if let card = deck?.removeAtIndex(cardIndex) {
+            if let card = deck?.remove(at: cardIndex) {
                 mutableCards.append(card)
             }
         }
@@ -234,18 +233,20 @@ struct Hand:DataTypeProtocol {
         return cards.count
     }
     
-    func itemAtPosition(index:Int) -> Card {
+    func itemAtPosition(_ index:Int) -> Card {
         return cards[index]
     }
     // -------------------------------------------------------------
     // Add Item:
     private func insertItem(atIndex index:Int) -> Hand {
         var mutableCards = cards
-        mutableCards.insert(mutableCards[0], atIndex: index)
+        if let newCard = deck?.popLast() {
+            mutableCards.insert(newCard, at: index)
+        }
         return Hand(cards:mutableCards)
     }
     
-    func addNewItemAtIndex(index:Int) -> Hand {
+    func addNewItemAtIndex(_ index:Int) -> Hand {
         return insertItem(atIndex:index)
     }
     
@@ -254,24 +255,24 @@ struct Hand:DataTypeProtocol {
     
     private func removeItem(atIndex index:Int) -> Hand {
         var mutableCards = cards
-        mutableCards.removeAtIndex(index)
+        mutableCards.remove(at: index)
         return Hand(cards:mutableCards)
     }
     
-    internal func deleteItemAtIndex(index:Int) -> Hand {
+    internal func deleteItemAtIndex(_ index:Int) -> Hand {
         return removeItem(atIndex:index)
     }
     
     // -------------------------------------------------------------
     // Move Item:
     
-    private func insertItem(card: Card, atIndex index: Int) -> Hand {
+    private func insertItem(_ card: Card, atIndex index: Int) -> Hand {
         var mutableCards = cards
-        mutableCards.insert(card, atIndex: index)
+        mutableCards.insert(card, at: index)
         return Hand(cards:mutableCards)
     }
     
-    func moveItem(fromIndex:Int, toIndex:Int) -> Hand {
+    func moveItem(_ fromIndex:Int, toIndex:Int) -> Hand {
         // Notice the functional approach:
         return deleteItemAtIndex(fromIndex).insertItem(cards[fromIndex], atIndex:toIndex)
     }

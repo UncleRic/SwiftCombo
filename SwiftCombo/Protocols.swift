@@ -19,19 +19,19 @@ protocol SourceTypeProtocol:UITableViewDataSource {
     // 'dataObject' had both a getter & setter:
     var dataObject:DataTypeProtocol{get set}
     var conditionForAdding: Bool {get}
-    func insertTopRowIn(tableView:UITableView)
-    func deleteRowAtIndexPath(indexPath:NSIndexPath, from tableView:UITableView)
+    func insertTopRowIn(_ tableView:UITableView)
+    func deleteRowAtIndexPath(_ indexPath:IndexPath, from tableView:UITableView)
 }
 
 extension SourceTypeProtocol {
     var conditionForAdding:Bool {
         return dataObject.numberOfItems < 5
     }
-    func insertTopRowIn(tableView:UITableView) {
-        tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Fade)
+    func insertTopRowIn(_ tableView:UITableView) {
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
     }
-    func deleteRowAtIndexPath(indexPath:NSIndexPath, from tableView:UITableView) {
-        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+    func deleteRowAtIndexPath(_ indexPath:IndexPath, from tableView:UITableView) {
+        tableView.deleteRows(at: [indexPath], with: .fade)
     }
 }
 
@@ -41,8 +41,8 @@ extension SourceTypeProtocol {
 
 protocol DataTypeProtocol {
     var numberOfItems:Int{get}
-    func addNewItemAtIndex(index:Int) -> Self
-    func deleteItemAtIndex(index:Int) -> Self
-    func moveItem(fromIndex:Int, toIndex:Int) -> Self
+    func addNewItemAtIndex(_ index:Int) -> Self
+    func deleteItemAtIndex(_ index:Int) -> Self
+    func moveItem(_ fromIndex:Int, toIndex:Int) -> Self
 }
 

@@ -24,37 +24,39 @@ class DataSource:NSObject, UITableViewDataSource, SourceTypeProtocol {
         self.dataObject = dataObject
     }
 
-    func addItemTo(tableView:UITableView) {
+    func addItemTo(_ tableView:UITableView) {
         if conditionForAdding {
             dataObject = dataObject.addNewItemAtIndex(0)
             insertTopRowIn(tableView)
+            tableView.isHidden = false
+            tableView.setNeedsDisplay()
         }
     }
     
     // -----------------------------------------------------------------------------------------------------
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataObject.numberOfItems
     }
     
     // -----------------------------------------------------------------------------------------------------
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         fatalError("This method must be overridden.")
     }
     
     // -----------------------------------------------------------------------------------------------------
     
-    func tableView(tableView: UITableView, commitEditingStyle
+    func tableView(_ tableView: UITableView, commit
         editingStyle: UITableViewCellEditingStyle,
-        forRowAtIndexPath indexPath: NSIndexPath) {
+        forRowAt indexPath: IndexPath) {
         
-        if editingStyle == .Delete {
+        if editingStyle == .delete {
             // 1) Delete from the model:
-            dataObject = dataObject.deleteItemAtIndex(indexPath.row)
+            dataObject = dataObject.deleteItemAtIndex((indexPath as NSIndexPath).row)
             // 2) Delete from the View:
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
 }
@@ -71,14 +73,14 @@ class HandDataSource:DataSource {
         return dataObject.numberOfItems < 5
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath:indexPath) as? CardCell,
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for:indexPath) as? CardCell,
         hand = dataObject as? Hand
             else {
             fatalError("Could not create Card cell.")
         }
         
-        cell.fillWith(hand[indexPath.row])
+        cell.fillWith(hand[(indexPath as NSIndexPath).row])
         return cell
     }
     

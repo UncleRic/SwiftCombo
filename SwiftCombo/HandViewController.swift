@@ -22,28 +22,28 @@ class HandViewController: UIViewController {
         super.viewDidLoad()
         gTableView.dataSource = dataSource
         let myNib = UINib(nibName: "CardTableViewCell",bundle: nil)
-        gTableView.registerNib(myNib, forCellReuseIdentifier: kCellIdentifier)
+        gTableView.register(myNib, forCellReuseIdentifier: kCellIdentifier)
     }
     
     override func viewDidLayoutSubviews() {
-        emptyLabel.hidden = (hand.numberOfItems > 0)
-        gTableView.hidden = !emptyLabel.hidden
+        emptyLabel.isHidden = (hand.numberOfItems > 0)
+        gTableView.isHidden = !emptyLabel.isHidden
+        deck = createDeck()
     }
     // -----------------------------------------------------------------------------------------------------
     // MARK: - Action methods
     
-    @IBAction func NewHand(sender: UIBarButtonItem) {
-        deck = createDeck()
+    @IBAction func NewHand(_ sender: UIBarButtonItem) {
         dataSource.dataObject = hand.createFullHand()
-        gTableView.hidden = false
+        gTableView.isHidden = false
         gTableView.reloadData()
     }
     
-    @IBAction func addCardAction(sender: UIBarButtonItem) {
+    @IBAction func addCardAction(_ sender: UIBarButtonItem) {
         dataSource.addItemTo(gTableView)
     }
     
-    @IBAction func exitAction(sender: UIBarButtonItem) {
+    @IBAction func exitAction(_ sender: UIBarButtonItem) {
         exit(0)
     }
     
