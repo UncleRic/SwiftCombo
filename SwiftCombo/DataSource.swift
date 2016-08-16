@@ -75,7 +75,7 @@ class HandDataSource:DataSource {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for:indexPath) as? CardCell,
-        hand = dataObject as? Hand
+        let hand = dataObject as? Hand
             else {
             fatalError("Could not create Card cell.")
         }

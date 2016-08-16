@@ -58,116 +58,116 @@ enum CardItem: Int {
         switch self {
         // Spades:
         case .aceSpades:
-            return(kAce, kSpades, UIColor.black(), getImage(kAceSpades))
+            return(kAce, kSpades, UIColor.black, getImage(kAceSpades))
         case .twoSpades:
-            return(kTwo, kSpades, UIColor.black(), getImage(kTwoSpades))
+            return(kTwo, kSpades, UIColor.black, getImage(kTwoSpades))
         case .threeSpades:
-            return(kThree, kSpades, UIColor.black(), getImage(kThreeSpades))
+            return(kThree, kSpades, UIColor.black, getImage(kThreeSpades))
         case .fourSpades:
-            return(kFour, kSpades, UIColor.black(), getImage(kFourSpades))
+            return(kFour, kSpades, UIColor.black, getImage(kFourSpades))
         case .fiveSpades:
-            return(kFive, kSpades, UIColor.black(), getImage(kFiveSpades))
+            return(kFive, kSpades, UIColor.black, getImage(kFiveSpades))
         case .sixSpades:
-            return(kSix, kSpades, UIColor.black(), getImage(kSixSpades))
+            return(kSix, kSpades, UIColor.black, getImage(kSixSpades))
         case .sevenSpades:
-            return(kSeven, kSpades, UIColor.black(), getImage(kSevenSpades))
+            return(kSeven, kSpades, UIColor.black, getImage(kSevenSpades))
         case .eightSpades:
-            return(kEight, kSpades, UIColor.black(), getImage(kEightSpades))
+            return(kEight, kSpades, UIColor.black, getImage(kEightSpades))
         case .nineSpades:
-            return(kNine, kSpades, UIColor.black(), getImage(kNineSpades))
+            return(kNine, kSpades, UIColor.black, getImage(kNineSpades))
         case .tenSpades:
-            return(kTen, kSpades, UIColor.black(), getImage(kTenSpades))
+            return(kTen, kSpades, UIColor.black, getImage(kTenSpades))
         case .jackSpades:
-            return(kJack, kSpades, UIColor.black(), getImage(kJackSpades))
+            return(kJack, kSpades, UIColor.black, getImage(kJackSpades))
         case .queenSpades:
-            return(kQueen, kSpades, UIColor.black(), getImage(kQueenSpades))
+            return(kQueen, kSpades, UIColor.black, getImage(kQueenSpades))
         case .kingSpades:
-            return(kKing, kSpades, UIColor.black(), getImage(kKingSpades))
+            return(kKing, kSpades, UIColor.black, getImage(kKingSpades))
             
         // Hearts:
         case .aceHearts:
-            return(kAce, kHearts, UIColor.red(), getImage(kAceHearts))
+            return(kAce, kHearts, UIColor.red, getImage(kAceHearts))
         case .twoHearts:
-            return(kTwo, kHearts, UIColor.red(), getImage(kTwoHearts))
+            return(kTwo, kHearts, UIColor.red, getImage(kTwoHearts))
         case .threeHearts:
-            return(kThree, kHearts, UIColor.red(), getImage(kThreeHearts))
+            return(kThree, kHearts, UIColor.red, getImage(kThreeHearts))
         case .fourHearts:
-            return(kFour, kHearts, UIColor.red(), getImage(kFourHearts))
+            return(kFour, kHearts, UIColor.red, getImage(kFourHearts))
         case .fiveHearts:
-            return(kFive, kHearts, UIColor.red(), getImage(kFiveHearts))
+            return(kFive, kHearts, UIColor.red, getImage(kFiveHearts))
         case .sixHearts:
-            return(kSix, kHearts, UIColor.red(), getImage(kSixHearts))
+            return(kSix, kHearts, UIColor.red, getImage(kSixHearts))
         case .sevenHearts:
-            return(kSeven, kHearts, UIColor.red(), getImage(kSevenHearts))
+            return(kSeven, kHearts, UIColor.red, getImage(kSevenHearts))
         case .eightHearts:
-            return(kEight, kHearts, UIColor.red(), getImage(kEightHearts))
+            return(kEight, kHearts, UIColor.red, getImage(kEightHearts))
         case .nineHearts:
-            return(kNine, kHearts, UIColor.red(), getImage(kNineHearts))
+            return(kNine, kHearts, UIColor.red, getImage(kNineHearts))
         case .tenHearts:
-            return(kTen, kHearts, UIColor.red(), getImage(kTenHearts))
+            return(kTen, kHearts, UIColor.red, getImage(kTenHearts))
         case .jackHearts:
-            return(kJack, kHearts, UIColor.red(), getImage(kJackHearts))
+            return(kJack, kHearts, UIColor.red, getImage(kJackHearts))
         case .queenHearts:
-            return(kQueen, kHearts, UIColor.red(), getImage(kQueenHearts))
+            return(kQueen, kHearts, UIColor.red, getImage(kQueenHearts))
         case .kingHearts:
-            return(kKing, kHearts, UIColor.red(), getImage(kKingHearts))
+            return(kKing, kHearts, UIColor.red, getImage(kKingHearts))
             
         // Clubs:
         case .aceClubs:
-            return(kAce, kClubs, UIColor.black(), getImage(kAceClubs))
+            return(kAce, kClubs, UIColor.black, getImage(kAceClubs))
         case .twoClubs:
-            return(kTwo, kClubs, UIColor.black(), getImage(kTwoClubs))
+            return(kTwo, kClubs, UIColor.black, getImage(kTwoClubs))
         case .threeClubs:
-            return(kThree, kClubs, UIColor.black(), getImage(kThreeClubs))
+            return(kThree, kClubs, UIColor.black, getImage(kThreeClubs))
         case .fourClubs:
-            return(kFour, kClubs, UIColor.black(), getImage(kFourClubs))
+            return(kFour, kClubs, UIColor.black, getImage(kFourClubs))
         case .fiveClubs:
-            return(kFive, kClubs, UIColor.black(), getImage(kFiveClubs))
+            return(kFive, kClubs, UIColor.black, getImage(kFiveClubs))
         case .sixClubs:
-            return(kSix, kClubs, UIColor.black(), getImage(kSixClubs))
+            return(kSix, kClubs, UIColor.black, getImage(kSixClubs))
         case .sevenClubs:
-            return(kSeven, kClubs, UIColor.black(), getImage(kSevenClubs))
+            return(kSeven, kClubs, UIColor.black, getImage(kSevenClubs))
         case .eightClubs:
-            return(kEight, kClubs, UIColor.black(), getImage(kEightClubs))
+            return(kEight, kClubs, UIColor.black, getImage(kEightClubs))
         case .nineClubs:
-            return(kNine, kClubs,  UIColor.black(), getImage(kNineClubs))
+            return(kNine, kClubs,  UIColor.black, getImage(kNineClubs))
         case .tenClubs:
-            return(kTen, kClubs, UIColor.black(), getImage(kTenClubs))
+            return(kTen, kClubs, UIColor.black, getImage(kTenClubs))
         case .jackClubs:
-            return(kJack, kClubs, UIColor.black(), getImage(kJackClubs))
+            return(kJack, kClubs, UIColor.black, getImage(kJackClubs))
         case .queenClubs:
-            return(kQueen, kClubs, UIColor.black(), getImage(kQueenClubs))
+            return(kQueen, kClubs, UIColor.black, getImage(kQueenClubs))
         case .kingClubs:
-            return(kKing, kClubs, UIColor.black(), getImage(kKingClubs))
+            return(kKing, kClubs, UIColor.black, getImage(kKingClubs))
             
             
         // Diamonds:
         case .aceDiamonds:
-            return(kAce, kDiamonds,UIColor.red(), getImage(kAceDiamonds))
+            return(kAce, kDiamonds,UIColor.red, getImage(kAceDiamonds))
         case .twoDiamonds:
-            return(kTwo, kDiamonds,UIColor.red(), getImage(kTwoDiamonds))
+            return(kTwo, kDiamonds,UIColor.red, getImage(kTwoDiamonds))
         case .threeDiamonds:
-            return(kThree, kDiamonds,UIColor.red(), getImage(kThreeDiamonds))
+            return(kThree, kDiamonds,UIColor.red, getImage(kThreeDiamonds))
         case .fourDiamonds:
-            return(kFour, kDiamonds,UIColor.red(), getImage(kFourDiamonds))
+            return(kFour, kDiamonds,UIColor.red, getImage(kFourDiamonds))
         case .fiveDiamonds:
-            return(kFive, kDiamonds,UIColor.red(), getImage(kFiveDiamonds))
+            return(kFive, kDiamonds,UIColor.red, getImage(kFiveDiamonds))
         case .sixDiamonds:
-            return(kSix, kDiamonds,UIColor.red(), getImage(kSixDiamonds))
+            return(kSix, kDiamonds,UIColor.red, getImage(kSixDiamonds))
         case .sevenDiamonds:
-            return(kSeven, kDiamonds,UIColor.red(), getImage(kSevenDiamonds))
+            return(kSeven, kDiamonds,UIColor.red, getImage(kSevenDiamonds))
         case .eightDiamonds:
-            return(kEight, kDiamonds,UIColor.red(), getImage(kEightDiamonds))
+            return(kEight, kDiamonds,UIColor.red, getImage(kEightDiamonds))
         case .nineDiamonds:
-            return(kNine, kDiamonds,UIColor.red(), getImage(kNineDiamonds))
+            return(kNine, kDiamonds,UIColor.red, getImage(kNineDiamonds))
         case .tenDiamonds:
-            return(kTen, kDiamonds,UIColor.red(), getImage(kTenDiamonds))
+            return(kTen, kDiamonds,UIColor.red, getImage(kTenDiamonds))
         case .jackDiamonds:
-            return(kJack, kDiamonds,UIColor.red(), getImage(kJackDiamonds))
+            return(kJack, kDiamonds,UIColor.red, getImage(kJackDiamonds))
         case .queenDiamonds:
-            return(kQueen, kDiamonds,UIColor.red(), getImage(kQueenDiamonds))
+            return(kQueen, kDiamonds,UIColor.red, getImage(kQueenDiamonds))
         case .kingDiamonds:
-            return(kKing, kDiamonds,UIColor.red(), getImage(kKingDiamonds))
+            return(kKing, kDiamonds,UIColor.red, getImage(kKingDiamonds))
         }
     }
 }
